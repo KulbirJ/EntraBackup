@@ -1,0 +1,90 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Azure Virtual Desktop",
+  "appId": "9cdead84-a844-4324-93f2-b2e6bb768d07",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [
+    {
+      "allowedMemberTypes": [
+        "Application",
+        "User"
+      ],
+      "description": "Creators can create Windows Virtual Desktop Tenants",
+      "displayName": "Tenant.Create",
+      "id": "299dad25-58e3-473d-9733-171fb3034713",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "Tenant.Create"
+    }
+  ],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-18T22:07:59.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Azure Virtual Desktop",
+  "homepage": null,
+  "id": "eeb7f00d-39c9-4bea-b8cb-97579038e22b",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [
+    {
+      "adminConsentDescription": "Allow the application to access Windows Virtual Desktop on your behalf.",
+      "adminConsentDisplayName": "Access Windows Virtual Desktop",
+      "id": "1ea0ab9c-b888-476f-aca9-0fc9a53b483a",
+      "isEnabled": true,
+      "type": "User",
+      "userConsentDescription": "Allow the application to access Windows Virtual Desktop on your behalf.",
+      "userConsentDisplayName": "Access Windows Virtual Desktop",
+      "value": "User.Access"
+    }
+  ],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [
+    "https://rdweb.wvd.microsoft.com/webclient",
+    "https://www.wvd.microsoft.com/webclient/index.html",
+    "https://www.wvd.microsoft.com/webclient",
+    "https://rdweb.wvd.microsoft.com/RDWeb/ConsentCallback",
+    "https://client-r0.wvd.microsoft.com/arm/webclient/aadj.html",
+    "https://client-r1.wvd.microsoft.com/arm/webclient/aadj.html",
+    "https://client-r1.wvd.microsoft.com/arm/webclient/index.html"
+  ],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "9cdead84-a844-4324-93f2-b2e6bb768d07",
+    "https://www.wvd.microsoft.com",
+    "ms-device-service://9cdead84-a844-4324-93f2-b2e6bb768d07",
+    "ms-device-service://host.wvd.microsoft.com"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [
+    "disableLegacyUserImpersonationClient",
+    "disableLegacyUserImpersonationResource"
+  ],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": "2024-04-05T17:06:39.0000000Z",
+    "displayName": "Microsoft Corporation",
+    "verifiedPublisherId": "5206095"
+  }
+}

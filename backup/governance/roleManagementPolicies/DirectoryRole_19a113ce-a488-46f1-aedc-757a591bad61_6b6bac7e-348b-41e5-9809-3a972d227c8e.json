@@ -1,0 +1,13 @@
+{
+  "description": "DirectoryRole",
+  "displayName": "DirectoryRole",
+  "id": "DirectoryRole_19a113ce-a488-46f1-aedc-757a591bad61_6b6bac7e-348b-41e5-9809-3a972d227c8e",
+  "isOrganizationDefault": false,
+  "lastModifiedBy": {
+    "displayName": null,
+    "id": null
+  },
+  "lastModifiedDateTime": null,
+  "scopeId": "/",
+  "scopeType": "DirectoryRole"
+}

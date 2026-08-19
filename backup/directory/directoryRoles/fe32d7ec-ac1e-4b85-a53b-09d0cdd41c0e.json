@@ -1,0 +1,14 @@
+{
+  "description": "Can manage all aspects of Microsoft Entra ID and Microsoft services that use Microsoft Entra identities.",
+  "displayName": "Global Administrator",
+  "id": "fe32d7ec-ac1e-4b85-a53b-09d0cdd41c0e",
+  "members": [
+    {
+      "@odata.type": "#microsoft.graph.user",
+      "displayName": "Kulbir Jaglan",
+      "id": "399b2b9a-ac4d-4ca5-83d0-3a67077d45ca",
+      "userPrincipalName": "KulbirJaglan@azsol642.onmicrosoft.com"
+    }
+  ],
+  "roleTemplateId": "62e90394-69f5-4237-9190-012177145e10"
+}

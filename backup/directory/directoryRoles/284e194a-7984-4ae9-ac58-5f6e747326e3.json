@@ -1,0 +1,7 @@
+{
+  "description": "Can read everything that a Global Administrator can, but not update anything.",
+  "displayName": "Global Reader",
+  "id": "284e194a-7984-4ae9-ac58-5f6e747326e3",
+  "members": [],
+  "roleTemplateId": "f2ef992c-3afb-46b9-b7cf-a126ee74c451"
+}

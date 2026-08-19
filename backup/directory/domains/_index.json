@@ -1,0 +1,9 @@
+{
+  "collection": "domains",
+  "count": 1,
+  "idField": "id",
+  "items": {
+    "azsol642.onmicrosoft.com": "azsol642.onmicrosoft.com"
+  },
+  "layout": "per-object"
+}

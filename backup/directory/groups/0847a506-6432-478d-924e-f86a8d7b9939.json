@@ -1,0 +1,36 @@
+{
+  "classification": null,
+  "createdDateTime": "2026-08-19T01:40:03.0000000Z",
+  "description": null,
+  "displayName": "Group1",
+  "expirationDateTime": null,
+  "groupTypes": [],
+  "id": "0847a506-6432-478d-924e-f86a8d7b9939",
+  "isAssignableToRole": true,
+  "isManagementRestricted": null,
+  "mail": null,
+  "mailEnabled": false,
+  "mailNickname": "f7d0c2ec-9",
+  "members": [],
+  "membershipRule": null,
+  "membershipRuleProcessingState": null,
+  "onPremisesSamAccountName": null,
+  "onPremisesSecurityIdentifier": null,
+  "onPremisesSyncEnabled": null,
+  "owners": [
+    {
+      "@odata.type": "#microsoft.graph.user",
+      "displayName": "Kulbir Jaglan",
+      "id": "399b2b9a-ac4d-4ca5-83d0-3a67077d45ca",
+      "userPrincipalName": "KulbirJaglan@azsol642.onmicrosoft.com"
+    }
+  ],
+  "preferredDataLocation": null,
+  "preferredLanguage": null,
+  "proxyAddresses": [],
+  "resourceProvisioningOptions": [],
+  "securityEnabled": true,
+  "securityIdentifier": "S-1-12-1-138913030-1200448562-1794657938-966359949",
+  "theme": null,
+  "visibility": "Private"
+}

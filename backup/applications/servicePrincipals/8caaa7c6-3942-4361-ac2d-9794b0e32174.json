@@ -1,0 +1,165 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Microsoft Service Trust",
+  "appId": "d6fdaa33-e821-4211-83d0-cf74736489e1",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allows applications to read and write MMD vocabularies for various tenants",
+      "displayName": "CustomerManagement.ReadWrite.MMD",
+      "id": "1994c32e-87b9-46f9-a8b8-7daf25cd5a95",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "CustomerManagement.ReadWrite.MMD"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Our app will be a one stop shop for current and prospective customers who need Security, Privacy, and Compliance information around Microsoft Cloud (Azure, Dynamics CRM Online and Office 365).  It should be open any tenant who has AAD record – trial tenants as well as paid tenant across Microsoft Cloud. ",
+      "displayName": "Microsoft Service Trust",
+      "id": "50bf3dfa-9431-427d-823a-f146d9350034",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "TBD"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allows applications to read and write CPMC vocabularies for various tenants",
+      "displayName": "CustomerManagement.ReadWrite.CPMC",
+      "id": "6dc96d9f-75cd-4c03-a450-6bf81a89ad9e",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "CustomerManagement.ReadWrite.CPMC"
+    }
+  ],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-18T22:07:54.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Microsoft Service Trust",
+  "homepage": null,
+  "id": "8caaa7c6-3942-4361-ac2d-9794b0e32174",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": "https://servicetrust.microsoft.com",
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [
+    {
+      "adminConsentDescription": "Allows users to read and write Compliance Manager data.",
+      "adminConsentDisplayName": "Read and write all Compliance Manager data",
+      "id": "05d808b8-d17a-47c9-ae7f-e20768cbad5d",
+      "isEnabled": true,
+      "type": "Admin",
+      "userConsentDescription": "Allows users to read and write Compliance Manager data.",
+      "userConsentDisplayName": "Read and write all Compliance Manager data",
+      "value": "ComplianceManager.ReadWrite.All"
+    },
+    {
+      "adminConsentDescription": "Our app will be a one stop shop for current and prospective customers who need Security, Privacy, and Compliance information around Microsoft Cloud (Azure, Dynamics CRM Online and Office 365).  It should be open any tenant who has AAD record – trial tenants as well as paid tenant across Microsoft Cloud. ",
+      "adminConsentDisplayName": "Microsoft Service Trust",
+      "id": "50bf3dfa-9431-427d-823a-f146d9350034",
+      "isEnabled": true,
+      "type": "Admin",
+      "userConsentDescription": "Our app will be a one stop shop for current and prospective customers who need Security, Privacy, and Compliance information around Microsoft Cloud (Azure, Dynamics CRM Online and Office 365).  It should be open any tenant who has AAD record – trial tenants as well as paid tenant across Microsoft Cloud. ",
+      "userConsentDisplayName": "Microsoft Service Trust",
+      "value": "TBD"
+    },
+    {
+      "adminConsentDescription": "Our app will be a one stop shop for current and prospective customers who need Security, Privacy, and Compliance information around Microsoft Cloud (Azure, Dynamics CRM Online and Office 365). It should be open any tenant who has AAD record – trial tenants as well as paid tenant across Microsoft Cloud.",
+      "adminConsentDisplayName": "Microsoft Service Trust",
+      "id": "b55dae21-0932-4324-a1cd-45a046d7a6e1",
+      "isEnabled": true,
+      "type": "Admin",
+      "userConsentDescription": "Our app will be a one stop shop for current and prospective customers who need Security, Privacy, and Compliance information around Microsoft Cloud (Azure, Dynamics CRM Online and Office 365). It should be open any tenant who has AAD record – trial tenants as well as paid tenant across Microsoft Cloud.",
+      "userConsentDisplayName": "Microsoft Service Trust",
+      "value": "Trust.Content.All"
+    },
+    {
+      "adminConsentDescription": "Allows users to read documents.",
+      "adminConsentDisplayName": "Read all documents",
+      "id": "e808ab43-7555-447f-8b87-1d6a5c5038ef",
+      "isEnabled": true,
+      "type": "Admin",
+      "userConsentDescription": "Allows users to read documents.",
+      "userConsentDisplayName": "Read all documents",
+      "value": "Documents.Read.All"
+    }
+  ],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [
+    "https://api.servicetrust.microsoft.com/api/login"
+  ],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "api://d6fdaa33-e821-4211-83d0-cf74736489e1",
+    "d6fdaa33-e821-4211-83d0-cf74736489e1",
+    "https://apc.complianceposturemanagement.office.net",
+    "https://are.complianceposturemanagement.office.net",
+    "https://aus.complianceposturemanagement.office.net",
+    "https://bra.complianceposturemanagement.office.net",
+    "https://can.complianceposturemanagement.office.net",
+    "https://che.complianceposturemanagement.office.net",
+    "https://deu.complianceposturemanagement.office.net",
+    "https://eur.complianceposturemanagement.office.net",
+    "https://fra.complianceposturemanagement.office.net",
+    "https://gbr.complianceposturemanagement.office.net",
+    "https://gccm.complianceposturemanagement.office.net",
+    "https://gccm.complianceposturemanagement.office365.us",
+    "https://ind.complianceposturemanagement.office.net",
+    "https://int.complianceposturemanagement.office.net",
+    "https://int.nonprod.complianceposturemanagement.office.net",
+    "https://isr.complianceposturemanagement.office.net",
+    "https://ita.complianceposturemanagement.office.net",
+    "https://jpn.complianceposturemanagement.office.net",
+    "https://kor.complianceposturemanagement.office.net",
+    "https://lam.complianceposturemanagement.office.net",
+    "https://nam.complianceposturemanagement.office.net",
+    "https://nor.complianceposturemanagement.office.net",
+    "https://pol.complianceposturemanagement.office.net",
+    "https://ppe.complianceposturemanagement.office.net",
+    "https://ppe.nonprod.complianceposturemanagement.office.net",
+    "https://prv.complianceposturemanagement.office.net",
+    "https://qat.complianceposturemanagement.office.net",
+    "https://servicetrust.microsoft.com",
+    "https://sgp.complianceposturemanagement.office.net",
+    "https://sov.complianceposturemanagement.office.net",
+    "https://swe.complianceposturemanagement.office.net",
+    "https://zaf.complianceposturemanagement.office.net"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [
+    "disableAcceptingTenantedPassthroughTokens",
+    "disableRequestingTenantedPassthroughTokens"
+  ],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

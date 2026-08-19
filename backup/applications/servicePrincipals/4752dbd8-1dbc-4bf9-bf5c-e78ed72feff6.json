@@ -1,0 +1,59 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Microsoft Approval Management",
+  "appId": "65d91a3d-ab74-42e6-8a2f-0add61688c74",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-18T22:08:00.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Microsoft Approval Management",
+  "homepage": null,
+  "id": "4752dbd8-1dbc-4bf9-bf5c-e78ed72feff6",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": "https://approvalmanagement.activedirectory.windowsazure.com",
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [
+    "https://account.activedirectory.windowsazure.com"
+  ],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "65d91a3d-ab74-42e6-8a2f-0add61688c74",
+    "65d91a3d-ab74-42e6-8a2f-0add61688c74/approvalmanagement.activedirectory.windowsazure.com",
+    "https://approvalmanagement.activedirectory.windowsazure.com"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [
+    "disableAcceptingTenantedPassthroughTokens",
+    "disableRequestingTenantedPassthroughTokens"
+  ],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

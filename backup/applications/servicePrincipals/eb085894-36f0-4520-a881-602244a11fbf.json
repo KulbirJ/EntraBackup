@@ -1,0 +1,53 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Office 365 Configure",
+  "appId": "aa9ecb1e-fd53-4aaa-a8fe-7a54de2c1334",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-18T22:05:40.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Office 365 Configure",
+  "homepage": null,
+  "id": "eb085894-36f0-4520-a881-602244a11fbf",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "aa9ecb1e-fd53-4aaa-a8fe-7a54de2c1334",
+    "aa9ecb1e-fd53-4aaa-a8fe-7a54de2c1334/configure.office.net"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

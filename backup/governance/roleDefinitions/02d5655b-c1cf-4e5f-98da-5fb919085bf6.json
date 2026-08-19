@@ -1,0 +1,24 @@
+{
+  "description": "Read and edit data from Microsoft 365 when accessing from the Microsoft Purview portal.",
+  "displayName": "Purview Workload Content Writer",
+  "id": "02d5655b-c1cf-4e5f-98da-5fb919085bf6",
+  "inheritsPermissionsFrom": [
+    {
+      "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+    }
+  ],
+  "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/v1.0/$metadata#roleManagement/directory/roleDefinitions('02d5655b-c1cf-4e5f-98da-5fb919085bf6')/inheritsPermissionsFrom",
+  "isBuiltIn": true,
+  "isEnabled": true,
+  "resourceScopes": [
+    "/"
+  ],
+  "rolePermissions": [
+    {
+      "allowedResourceActions": [],
+      "condition": null
+    }
+  ],
+  "templateId": "02d5655b-c1cf-4e5f-98da-5fb919085bf6",
+  "version": "1"
+}

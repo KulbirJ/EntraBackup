@@ -1,0 +1,216 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Azure Signup Api",
+  "appId": "3829f069-1c33-45dd-84ab-2465f4282677",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allows the app to create a billing account with UsExempt taxid.",
+      "displayName": "UsExemptTaxId",
+      "id": "06aac3fb-02c4-49ef-9f4d-c55455eab2e3",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "UsExemptTaxId"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allow user to add charity qualification.",
+      "displayName": "Qualification_Charity",
+      "id": "0fab173d-4ed1-478b-976a-8c8ee219758b",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "Qualification_Charity"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allow user to add government qualification.",
+      "displayName": "Qualification_Government",
+      "id": "3e74b245-2d1f-4ffb-a5e8-9a05aceca540",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "Qualification_Government"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allows partners to add tags with gov namespace.",
+      "displayName": "Tag_gov",
+      "id": "537eda31-79dd-4d7a-882a-00651883dcec",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "Tag_gov"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allows the app to update the billing stage.",
+      "displayName": "UpdateBillingStage",
+      "id": "5653af47-c35e-4df8-b835-bd1b642b6931",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "UpdateBillingStage"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Provides delegated role to the caller.",
+      "displayName": "SignupPlatformDelegatedRole",
+      "id": "8de2faed-dae7-4e94-8d5d-a49be218c680",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "SignupPlatformDelegatedRole"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allow user to add gcc high qualification.",
+      "displayName": "Qualification_GCCHigh",
+      "id": "ab0c514c-6a2b-4a77-81bc-74019dff79d3",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "Qualification_GCCHigh"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allows the app to create and get a new InvitationId for tenant and billing account creation.",
+      "displayName": "CreateInvitation20230101",
+      "id": "b39d576f-c5a3-4820-b851-00060443f895",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "CreateInvitation20230101"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allows partners to add tags with servicescope namespace.",
+      "displayName": "Tag_servicescope",
+      "id": "b9a6ff0b-f721-41df-915d-a0094656547b",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "Tag_servicescope"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allows partners to add tags with edu namespace.",
+      "displayName": "Tag_edu",
+      "id": "be01a05d-841f-49e7-9fd9-06ddc2bd6e28",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "Tag_edu"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allow user to add dod qualification.",
+      "displayName": "Qualification_DOD",
+      "id": "d0175eef-86a5-4f91-ba11-e69a87656565",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "Qualification_DOD"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allows partners to add tags with ea namespace.",
+      "displayName": "Tag_ea",
+      "id": "d59f33c1-1406-4028-a0f7-8f00ae1dbf10",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "Tag_ea"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allows partners to add tags with charity namespace.",
+      "displayName": "Tag_charity",
+      "id": "eb6f173a-fd78-41c4-9208-e2df4e4e0475",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "Tag_charity"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allow user to add commercial qualification.",
+      "displayName": "Qualification_Commercial",
+      "id": "f04d1efa-b98b-4a56-ad63-a259c4859fdd",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "Qualification_Commercial"
+    }
+  ],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-18T22:06:45.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Azure Signup Api",
+  "homepage": null,
+  "id": "fd626c6f-1836-40bb-bca2-54c4fb417282",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "3829f069-1c33-45dd-84ab-2465f4282677",
+    "https://signupapi-airgap.trafficmanager.net",
+    "https://signupapi-airgap.trafficmanager.net/",
+    "https://signupapi.azure.com",
+    "https://signupapi.azure.com/"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [
+    "disableAcceptingTenantedPassthroughTokens",
+    "disableLegacyUserImpersonationClient",
+    "disableLegacyUserImpersonationResource",
+    "disableRequestingTenantedPassthroughTokens"
+  ],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

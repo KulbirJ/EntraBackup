@@ -1,0 +1,10 @@
+{
+  "collection": "groups",
+  "count": 2,
+  "idField": "id",
+  "items": {
+    "0847a506-6432-478d-924e-f86a8d7b9939": "Group1",
+    "ee57c5a7-50fe-4d17-9783-772a525baeca": "Group2"
+  },
+  "layout": "per-object"
+}

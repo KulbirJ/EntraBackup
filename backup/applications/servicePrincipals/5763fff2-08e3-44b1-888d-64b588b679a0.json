@@ -1,0 +1,96 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Microsoft Exchange Online Protection",
+  "appId": "00000007-0000-0ff1-ce00-000000000000",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Exchange.ManageAsApp",
+      "displayName": "Exchange.ManageAsApp",
+      "id": "455e5cd2-84e8-4751-8344-5672145dfa17",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "Exchange.ManageAsApp"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "ThreatSubmission.ReadWrite.All",
+      "displayName": "ThreatSubmission.ReadWrite.All",
+      "id": "8f819283-077c-4c68-aa24-0ad706da26e0",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "ThreatSubmission.ReadWrite.All"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Scope to allow FirstParty APPS to make PolicySync calls",
+      "displayName": "EopPolicySync.AccessAsApp",
+      "id": "c79b0778-99a8-4d45-9063-3f160ec2776d",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "EopPolicySync.AccessAsApp"
+    }
+  ],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-18T22:07:52.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Microsoft Exchange Online Protection",
+  "homepage": null,
+  "id": "5763fff2-08e3-44b1-888d-64b588b679a0",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [
+    "https://admin.protection.outlook.com/ExtendedReport/CallBack"
+  ],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "00000007-0000-0ff1-ce00-000000000000",
+    "00000007-0000-0ff1-ce00-000000000000/*.dataservice.protection.outlook.com",
+    "00000007-0000-0ff1-ce00-000000000000/*.protection.outlook.com",
+    "00000007-0000-0ff1-ce00-000000000000/admin.protection.beta.outlook.com",
+    "00000007-0000-0ff1-ce00-000000000000/admin.protection.outlook.com",
+    "https://*.dataservice.protection.outlook.com",
+    "https://*.protection.outlook.com",
+    "https://ps.protection.office365.us",
+    "https://substrate.office.com/CompliancePolicy/api/v1.0/ClientSyncFileV2"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

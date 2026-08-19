@@ -1,0 +1,21 @@
+{
+  "appScopeId": null,
+  "createdDateTime": "2026-08-19T01:46:59.4300000Z",
+  "createdUsing": "f53a9435-eb91-4f84-957f-e79c446b642a",
+  "directoryScopeId": "/",
+  "id": "f53a9435-eb91-4f84-957f-e79c446b642a",
+  "memberType": "Direct",
+  "modifiedDateTime": "0001-01-01T08:00:00.0000000Z",
+  "principalId": "0847a506-6432-478d-924e-f86a8d7b9939",
+  "roleDefinitionId": "194ae4cb-b126-40b2-bd5b-6091b380977d",
+  "scheduleInfo": {
+    "expiration": {
+      "duration": null,
+      "endDateTime": "2027-08-19T01:46:30.2400000Z",
+      "type": "afterDateTime"
+    },
+    "recurrence": null,
+    "startDateTime": "2026-08-19T01:46:59.4300000Z"
+  },
+  "status": "Provisioned"
+}

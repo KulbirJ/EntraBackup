@@ -1,0 +1,27 @@
+{
+  "description": "Can manage all aspects of the Cloud App Security product.",
+  "displayName": "Cloud App Security Administrator",
+  "id": "892c5842-a9a6-463a-8041-72aa08ca3cf6",
+  "inheritsPermissionsFrom": [
+    {
+      "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+    }
+  ],
+  "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/v1.0/$metadata#roleManagement/directory/roleDefinitions('892c5842-a9a6-463a-8041-72aa08ca3cf6')/inheritsPermissionsFrom",
+  "isBuiltIn": true,
+  "isEnabled": true,
+  "resourceScopes": [
+    "/"
+  ],
+  "rolePermissions": [
+    {
+      "allowedResourceActions": [
+        "microsoft.directory/cloudAppSecurity/allProperties/allTasks",
+        "microsoft.office365.webPortal/allEntities/standard/read"
+      ],
+      "condition": null
+    }
+  ],
+  "templateId": "892c5842-a9a6-463a-8041-72aa08ca3cf6",
+  "version": "1"
+}

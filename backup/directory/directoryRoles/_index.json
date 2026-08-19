@@ -1,0 +1,15 @@
+{
+  "collection": "directoryRoles",
+  "count": 7,
+  "idField": "id",
+  "items": {
+    "13e7044c-8514-4d4a-a151-a018b0113245": "Billing Administrator",
+    "284e194a-7984-4ae9-ac58-5f6e747326e3": "Global Reader",
+    "386816a7-641a-4850-ac7e-0f231b75f2ff": "Directory Readers",
+    "65e08240-bc45-444c-bf8d-af76dcbc828e": "AI Reader",
+    "66396f33-72a8-45b8-87e7-b47ddcd0d26e": "Application Administrator",
+    "e3fee74d-33c0-453c-85ac-2165875ec9eb": "Security Administrator",
+    "fe32d7ec-ac1e-4b85-a53b-09d0cdd41c0e": "Global Administrator"
+  },
+  "layout": "per-object"
+}

@@ -1,0 +1,91 @@
+{
+  "accountEnabled": true,
+  "ageGroup": null,
+  "assignedLicenses": [
+    {
+      "disabledPlans": [],
+      "skuId": "84a661c4-e949-4bd2-a560-ed7766fcaf2b"
+    }
+  ],
+  "assignedPlans": [
+    {
+      "assignedDateTime": "2026-08-18T22:08:12.0000000Z",
+      "capabilityStatus": "Enabled",
+      "service": "AADPremiumService",
+      "servicePlanId": "41781fb2-bc02-4b7c-bd55-b576c07bb09d"
+    },
+    {
+      "assignedDateTime": "2026-08-18T22:08:12.0000000Z",
+      "capabilityStatus": "Enabled",
+      "service": "MultiFactorService",
+      "servicePlanId": "8a256a2b-b617-496d-b51b-e76466e88db0"
+    },
+    {
+      "assignedDateTime": "2026-08-18T22:08:12.0000000Z",
+      "capabilityStatus": "Enabled",
+      "service": "Adallom",
+      "servicePlanId": "932ad362-64a8-4783-9106-97849a1a30b9"
+    },
+    {
+      "assignedDateTime": "2026-08-18T22:08:12.0000000Z",
+      "capabilityStatus": "Enabled",
+      "service": "AADPremiumService",
+      "servicePlanId": "eec0eb4f-6444-4f95-aba0-50c24d67f998"
+    }
+  ],
+  "businessPhones": [
+    "3069992658"
+  ],
+  "city": "Regina",
+  "companyName": null,
+  "consentProvidedForMinor": null,
+  "country": null,
+  "createdDateTime": "2026-08-18T22:05:39.0000000Z",
+  "creationType": null,
+  "department": null,
+  "displayName": "Kulbir Jaglan",
+  "employeeHireDate": null,
+  "employeeId": null,
+  "employeeType": null,
+  "externalUserState": null,
+  "faxNumber": null,
+  "givenName": "Kulbir",
+  "id": "399b2b9a-ac4d-4ca5-83d0-3a67077d45ca",
+  "identities": [
+    {
+      "issuer": "azsol642.onmicrosoft.com",
+      "issuerAssignedId": "KulbirJaglan@azsol642.onmicrosoft.com",
+      "signInType": "userPrincipalName"
+    }
+  ],
+  "imAddresses": [],
+  "jobTitle": null,
+  "lastPasswordChangeDateTime": "2026-08-18T22:05:39.0000000Z",
+  "legalAgeGroupClassification": null,
+  "mail": null,
+  "mailNickname": "KulbirJaglan",
+  "mobilePhone": null,
+  "officeLocation": null,
+  "onPremisesDistinguishedName": null,
+  "onPremisesDomainName": null,
+  "onPremisesImmutableId": null,
+  "onPremisesSamAccountName": null,
+  "onPremisesSecurityIdentifier": null,
+  "onPremisesSyncEnabled": null,
+  "onPremisesUserPrincipalName": null,
+  "otherMails": [
+    "jaglan.kulvir@gmail.com"
+  ],
+  "passwordPolicies": null,
+  "postalCode": "s4x 0n8",
+  "preferredLanguage": "en",
+  "proxyAddresses": [],
+  "securityIdentifier": "S-1-12-1-966470554-1285925965-1731907715-3393551623",
+  "showInAddressList": null,
+  "state": "sk",
+  "streetAddress": "2460 Saunders Cres",
+  "surname": "Jaglan",
+  "usageLocation": "CA",
+  "userPrincipalName": "KulbirJaglan@azsol642.onmicrosoft.com",
+  "userType": "Member"
+}

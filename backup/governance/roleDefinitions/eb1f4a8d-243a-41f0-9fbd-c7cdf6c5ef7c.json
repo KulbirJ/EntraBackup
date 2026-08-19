@@ -1,0 +1,31 @@
+{
+  "description": "Has administrative access in the Microsoft 365 Insights app.",
+  "displayName": "Insights Administrator",
+  "id": "eb1f4a8d-243a-41f0-9fbd-c7cdf6c5ef7c",
+  "inheritsPermissionsFrom": [
+    {
+      "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+    }
+  ],
+  "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/v1.0/$metadata#roleManagement/directory/roleDefinitions('eb1f4a8d-243a-41f0-9fbd-c7cdf6c5ef7c')/inheritsPermissionsFrom",
+  "isBuiltIn": true,
+  "isEnabled": true,
+  "resourceScopes": [
+    "/"
+  ],
+  "rolePermissions": [
+    {
+      "allowedResourceActions": [
+        "microsoft.azure.serviceHealth/allEntities/allTasks",
+        "microsoft.azure.supportTickets/allEntities/allTasks",
+        "microsoft.insights/allEntities/allProperties/allTasks",
+        "microsoft.office365.serviceHealth/allEntities/allTasks",
+        "microsoft.office365.supportTickets/allEntities/allTasks",
+        "microsoft.office365.webPortal/allEntities/standard/read"
+      ],
+      "condition": null
+    }
+  ],
+  "templateId": "eb1f4a8d-243a-41f0-9fbd-c7cdf6c5ef7c",
+  "version": "1"
+}

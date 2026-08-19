@@ -1,0 +1,26 @@
+{
+  "description": "Read audit logs related to custom security attributes.",
+  "displayName": "Attribute Log Reader",
+  "id": "9c99539d-8186-4804-835f-fd51ef9e2dcd",
+  "inheritsPermissionsFrom": [
+    {
+      "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+    }
+  ],
+  "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/v1.0/$metadata#roleManagement/directory/roleDefinitions('9c99539d-8186-4804-835f-fd51ef9e2dcd')/inheritsPermissionsFrom",
+  "isBuiltIn": true,
+  "isEnabled": true,
+  "resourceScopes": [
+    "/"
+  ],
+  "rolePermissions": [
+    {
+      "allowedResourceActions": [
+        "microsoft.directory/customSecurityAttributeAuditLogs/allProperties/read"
+      ],
+      "condition": null
+    }
+  ],
+  "templateId": "9c99539d-8186-4804-835f-fd51ef9e2dcd",
+  "version": "1"
+}

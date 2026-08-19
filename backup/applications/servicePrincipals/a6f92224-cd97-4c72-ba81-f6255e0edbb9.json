@@ -1,0 +1,66 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "entra-backup-ci",
+  "appId": "9f47aa95-1148-4cf4-8514-b353b958de16",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "19a113ce-a488-46f1-aedc-757a591bad61",
+  "appRoleAssignedTo": [
+    {
+      "appRoleId": "00000000-0000-0000-0000-000000000000",
+      "createdDateTime": "2026-08-19T03:26:27.2536434Z",
+      "id": "miubOU2spUyD0DpnB31Fyvjgo0rkRohPpvagH7o25VQ",
+      "principalDisplayName": "Kulbir Jaglan",
+      "principalId": "399b2b9a-ac4d-4ca5-83d0-3a67077d45ca",
+      "principalType": "User",
+      "resourceDisplayName": "entra-backup-ci",
+      "resourceId": "a6f92224-cd97-4c72-ba81-f6255e0edbb9"
+    }
+  ],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [],
+  "createdByAppId": "18ed3507-a475-4ccb-b669-d66bc9f2a36e",
+  "createdDateTime": "2026-08-19T03:23:52.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "entra-backup-ci",
+  "homepage": null,
+  "id": "a6f92224-cd97-4c72-ba81-f6255e0edbb9",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "9f47aa95-1148-4cf4-8514-b353b958de16"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMyOrg",
+  "tags": [
+    "HideApp",
+    "WindowsAzureActiveDirectoryIntegratedApp"
+  ],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

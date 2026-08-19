@@ -1,0 +1,79 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "o365.servicecommunications.microsoft.com",
+  "appId": "cb1bda4c-1213-4e8b-911a-0a8c83c5d3b7",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "A placeholder scope for preauth",
+      "displayName": "PreAuthPlaceholder",
+      "id": "25b4ea33-257e-47f5-b778-8df9c7e10548",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "PreAuthPlaceholder"
+    }
+  ],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-18T22:44:39.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "o365.servicecommunications.microsoft.com",
+  "homepage": null,
+  "id": "f699b9b7-6477-4b4a-a2e0-c16bfadd0616",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [
+    {
+      "adminConsentDescription": "A placeholder scope for preauth",
+      "adminConsentDisplayName": "PreAuthPlaceholder",
+      "id": "25b4ea33-257e-47f5-b778-8df9c7e10548",
+      "isEnabled": true,
+      "type": "Admin",
+      "userConsentDescription": "A placeholder scope for preauth for your tenant on your behalf",
+      "userConsentDisplayName": "PreAuthPlaceholder",
+      "value": "PreAuthPlaceholder"
+    }
+  ],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "cb1bda4c-1213-4e8b-911a-0a8c83c5d3b7",
+    "https://o365.servicecommunications.microsoft.com"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [
+    "disableLegacyUserImpersonationClient",
+    "disableLegacyUserImpersonationResource"
+  ],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

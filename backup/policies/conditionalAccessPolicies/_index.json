@@ -1,0 +1,9 @@
+{
+  "collection": "conditionalAccessPolicies",
+  "count": 1,
+  "idField": "id",
+  "items": {
+    "a6ea20c6-fc98-434e-bd45-26374c4dc9dc": "Require multifactor authentication for admins"
+  },
+  "layout": "per-object"
+}

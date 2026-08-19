@@ -1,0 +1,7 @@
+{
+  "description": "Can perform common billing related tasks like updating payment information.",
+  "displayName": "Billing Administrator",
+  "id": "13e7044c-8514-4d4a-a151-a018b0113245",
+  "members": [],
+  "roleTemplateId": "b0f54661-2d74-4c50-afa3-1ec803f12efe"
+}

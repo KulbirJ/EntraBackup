@@ -1,0 +1,91 @@
+{
+  "assignedPlans": [
+    {
+      "assignedDateTime": "2026-08-18T22:07:43.0000000Z",
+      "capabilityStatus": "Enabled",
+      "service": "exchange",
+      "servicePlanId": "113feb6c-3fe4-4440-bddc-54d774bf0318"
+    },
+    {
+      "assignedDateTime": "2026-08-18T22:07:43.0000000Z",
+      "capabilityStatus": "Enabled",
+      "service": "AADPremiumService",
+      "servicePlanId": "41781fb2-bc02-4b7c-bd55-b576c07bb09d"
+    },
+    {
+      "assignedDateTime": "2026-08-18T22:07:43.0000000Z",
+      "capabilityStatus": "Enabled",
+      "service": "MultiFactorService",
+      "servicePlanId": "8a256a2b-b617-496d-b51b-e76466e88db0"
+    },
+    {
+      "assignedDateTime": "2026-08-18T22:07:43.0000000Z",
+      "capabilityStatus": "Enabled",
+      "service": "Adallom",
+      "servicePlanId": "932ad362-64a8-4783-9106-97849a1a30b9"
+    },
+    {
+      "assignedDateTime": "2026-08-18T22:12:40.0000000Z",
+      "capabilityStatus": "Enabled",
+      "service": "AADPremiumService",
+      "servicePlanId": "e866a266-3cff-43a3-acca-0c90a7e00c8b"
+    },
+    {
+      "assignedDateTime": "2026-08-18T22:07:43.0000000Z",
+      "capabilityStatus": "Enabled",
+      "service": "AADPremiumService",
+      "servicePlanId": "eec0eb4f-6444-4f95-aba0-50c24d67f998"
+    }
+  ],
+  "businessPhones": [
+    "3069992658"
+  ],
+  "city": "Regina",
+  "country": null,
+  "countryLetterCode": "CA",
+  "createdDateTime": "2026-08-18T22:05:38.0000000Z",
+  "defaultUsageLocation": null,
+  "directorySizeQuota": {
+    "total": 600,
+    "used": 114
+  },
+  "displayName": "azsol",
+  "id": "19a113ce-a488-46f1-aedc-757a591bad61",
+  "isMultipleDataLocationsForServicesEnabled": null,
+  "marketingNotificationEmails": [],
+  "onPremisesSyncEnabled": null,
+  "onPremisesSyncStatus": [],
+  "partnerTenantType": null,
+  "postalCode": "s4x 0n8",
+  "preferredLanguage": "en",
+  "privacyProfile": null,
+  "provisionedPlans": [
+    {
+      "capabilityStatus": "Enabled",
+      "provisioningStatus": "Success",
+      "service": "Adallom"
+    },
+    {
+      "capabilityStatus": "Enabled",
+      "provisioningStatus": "Success",
+      "service": "exchange"
+    }
+  ],
+  "securityComplianceNotificationMails": [],
+  "securityComplianceNotificationPhones": [],
+  "state": "sk",
+  "street": "2460 Saunders Cres",
+  "technicalNotificationMails": [
+    "jaglan.kulvir@gmail.com"
+  ],
+  "tenantType": "AAD",
+  "verifiedDomains": [
+    {
+      "capabilities": "Email, OfficeCommunicationsOnline",
+      "isDefault": true,
+      "isInitial": true,
+      "name": "azsol642.onmicrosoft.com",
+      "type": "Managed"
+    }
+  ]
+}

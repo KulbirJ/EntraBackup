@@ -1,0 +1,74 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Device Registration Service",
+  "appId": "01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-18T22:08:40.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Device Registration Service",
+  "homepage": null,
+  "id": "c3d2fb22-579d-4d40-b7d6-7438275d480b",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [
+    {
+      "adminConsentDescription": "Allow the application permissions to delete any device registered to the signed-in user",
+      "adminConsentDisplayName": "User can delete devices that belong to them",
+      "id": "086327cd-9afe-4777-8341-b136a1866bb3",
+      "isEnabled": true,
+      "type": "User",
+      "userConsentDescription": "Allow the application to delete your devices on your behalf",
+      "userConsentDisplayName": "Delete devices that belong to me",
+      "value": "self_service_device_delete"
+    }
+  ],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [
+    "https://login.windows.net/WebApp/CloudDomainJoin/4",
+    "https://login.microsoftonline.com/WebApp/CloudDomainJoin/4",
+    "https://login.microsoftonline.com/WebApp/CloudDomainJoin/3",
+    "https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/",
+    "https://enterpriseregistration.microsoftonline.us/enrollmentserver/otaprofile/"
+  ],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9",
+    "urn:ms-drs:enterpriseregistration.microsoftonline.us",
+    "urn:ms-drs:enterpriseregistration.windows.net"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [
+    "disableAcceptingTenantedPassthroughTokens",
+    "disableRequestingTenantedPassthroughTokens"
+  ],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

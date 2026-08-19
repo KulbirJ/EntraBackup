@@ -1,0 +1,65 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Microsoft App Access Panel",
+  "appId": "0000000c-0000-0000-c000-000000000000",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-18T22:05:40.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Microsoft App Access Panel",
+  "homepage": null,
+  "id": "d9b76928-d97a-49cf-9253-4fc1e59088c7",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": "https://account.activedirectory.windowsazure.com/Account/ClearCookies",
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [
+    "https://account-tip.activedirectory.windowsazure.com/",
+    "https://account.activedirectory.windowsazure.com/",
+    "https://account.activedirectory.windowsazure.com/applications/redirecttoapplication.aspx",
+    "https://api.mysignins.microsoft.com/api/post/registerSsprMethodsInterrupt",
+    "https://mysignins.microsoft.com/api/post/registerSsprMethodsInterrupt",
+    "https://api.mysignins.microsoft.com/api/post/registerMfaMethods",
+    "https://mysignins.microsoft.com/api/post/registerMfaMethods",
+    "https://account.activedirectory.windowsazure.com/proofup.aspx"
+  ],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "0000000c-0000-0000-c000-000000000000",
+    "0000000c-0000-0000-c000-000000000000/activedirectory.windowsazure.com"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [
+    "disableAcceptingTenantedPassthroughTokens",
+    "disableRequestingTenantedPassthroughTokens"
+  ],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

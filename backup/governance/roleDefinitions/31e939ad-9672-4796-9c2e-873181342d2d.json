@@ -1,0 +1,27 @@
+{
+  "description": "Can view and share dashboards and insights via the M365 Insights app.",
+  "displayName": "Insights Business Leader",
+  "id": "31e939ad-9672-4796-9c2e-873181342d2d",
+  "inheritsPermissionsFrom": [
+    {
+      "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+    }
+  ],
+  "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/v1.0/$metadata#roleManagement/directory/roleDefinitions('31e939ad-9672-4796-9c2e-873181342d2d')/inheritsPermissionsFrom",
+  "isBuiltIn": true,
+  "isEnabled": true,
+  "resourceScopes": [
+    "/"
+  ],
+  "rolePermissions": [
+    {
+      "allowedResourceActions": [
+        "microsoft.insights/programs/allProperties/update",
+        "microsoft.insights/reports/allProperties/read"
+      ],
+      "condition": null
+    }
+  ],
+  "templateId": "31e939ad-9672-4796-9c2e-873181342d2d",
+  "version": "1"
+}

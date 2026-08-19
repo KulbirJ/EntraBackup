@@ -1,0 +1,102 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Microsoft password reset service",
+  "appId": "93625bc8-bfe2-437a-97e0-3d0060024faa",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allows the app to uninstall Microsoft Entra Connect Sync Agent and offboard SSPR for the tenant",
+      "displayName": "Read, write and manage Microsoft Entra Connect Sync Agent",
+      "id": "69201c67-737b-4a20-8f16-e0c8c64e0b0e",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "PasswordWriteback.OffboardClient.All"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allows the app to register a newer version of on-premises Microsoft Entra Connect Sync Agent.",
+      "displayName": "Read, write and manage Microsoft Entra Connect Sync Agent",
+      "id": "e006e431-a65b-4f3e-8808-77d29d4c5f1a",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "PasswordWriteback.RegisterClientVersion.All"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allows the app to refresh and recreate on-premises configuration for Microsoft self-service password reset.",
+      "displayName": "Read, write and manage self-service password reset writeback configuration",
+      "id": "fc7e8088-95b5-453e-8bef-b17ecfec5ba3",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "PasswordWriteback.RefreshClient.All"
+    }
+  ],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-19T02:30:04.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Microsoft password reset service",
+  "homepage": null,
+  "id": "50873bc4-6488-44d1-b253-22f5de4fc36b",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [
+    {
+      "adminConsentDescription": "Directory.AccessAsUser.All",
+      "adminConsentDisplayName": "Directory.AccessAsUser.All",
+      "id": "7757dd34-1b17-4123-afba-9bdbeeb48d1a",
+      "isEnabled": true,
+      "type": "User",
+      "userConsentDescription": "Directory.AccessAsUser.All",
+      "userConsentDisplayName": "Directory.AccessAsUser.All",
+      "value": "Directory.AccessAsUser.All"
+    }
+  ],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [
+    "https://tip.passwordreset.microsoftonline.com/mmr/authorize",
+    "https://passwordreset.microsoftonline.com/mmr/authorize"
+  ],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "93625bc8-bfe2-437a-97e0-3d0060024faa",
+    "https://passwordreset.microsoftonline.com",
+    "https://passwordreset.microsoftonline.com/"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

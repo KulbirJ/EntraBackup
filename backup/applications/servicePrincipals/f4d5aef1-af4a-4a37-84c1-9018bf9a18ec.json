@@ -1,0 +1,81 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "OCaaS Client Interaction Service",
+  "appId": "c2ada927-a9e2-4564-aae2-70775a2fa0af",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-18T22:07:58.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "OCaaS Client Interaction Service",
+  "homepage": null,
+  "id": "f4d5aef1-af4a-4a37-84c1-9018bf9a18ec",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": "https://clients.config.office.net/logout",
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [
+    {
+      "adminConsentDescription": "This policy allows the user to read policies applicable",
+      "adminConsentDisplayName": "Read policies for the user",
+      "id": "7e204991-dcdd-4986-9ff0-d058192184d7",
+      "isEnabled": true,
+      "type": "User",
+      "userConsentDescription": "This policy allows the user to read policies applicable",
+      "userConsentDisplayName": "Read policies for the user",
+      "value": "UserPolicies.Read"
+    },
+    {
+      "adminConsentDescription": "This scope allows user to read and write user policies.",
+      "adminConsentDisplayName": "This scope allows user to read and write user policies.",
+      "id": "857ba34d-369c-4a02-89ae-83e98336ec02",
+      "isEnabled": true,
+      "type": "User",
+      "userConsentDescription": "This scope allows user to read and write user policies.",
+      "userConsentDisplayName": "This scope allows user to read and write user policies.",
+      "value": "UserPolicies.ReadWrite"
+    }
+  ],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [
+    "https://clients.config.office.net/",
+    "https://clients.config.office.net",
+    "https://clients.config.gcc.office.net/",
+    "https://clients.config.gcc.office.net"
+  ],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "c2ada927-a9e2-4564-aae2-70775a2fa0af",
+    "https://clients.config.gcc.office.net/",
+    "https://clients.config.office.net",
+    "https://clients.config.office.net/"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

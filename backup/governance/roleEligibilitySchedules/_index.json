@@ -1,0 +1,12 @@
+{
+  "collection": "roleEligibilitySchedules",
+  "count": 4,
+  "idField": "id",
+  "items": {
+    "4dd0b133-7e85-4e0a-ad5f-1b0034ca0453": "9b895d92-2cd3-44c7-9d02-a6ac2d5ea5c3",
+    "60490ff0-f54a-44bb-8a18-44dfd2a0a18a": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b",
+    "a0a640b6-39a9-48f7-ad18-56a6714ed05c": "1fe13547-53f6-408d-ac04-7f8eed167b38",
+    "f53a9435-eb91-4f84-957f-e79c446b642a": "194ae4cb-b126-40b2-bd5b-6091b380977d"
+  },
+  "layout": "per-object"
+}

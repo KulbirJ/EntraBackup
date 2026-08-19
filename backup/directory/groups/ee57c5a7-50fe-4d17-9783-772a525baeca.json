@@ -1,0 +1,42 @@
+{
+  "classification": null,
+  "createdDateTime": "2026-08-19T02:51:23.0000000Z",
+  "description": null,
+  "displayName": "Group2",
+  "expirationDateTime": null,
+  "groupTypes": [],
+  "id": "ee57c5a7-50fe-4d17-9783-772a525baeca",
+  "isAssignableToRole": true,
+  "isManagementRestricted": null,
+  "mail": null,
+  "mailEnabled": false,
+  "mailNickname": "79e2b75e-3",
+  "members": [
+    {
+      "@odata.type": "#microsoft.graph.user",
+      "displayName": "Mr user3",
+      "id": "2ac3d93e-0087-42ce-944b-7a6783c8d94d",
+      "userPrincipalName": "user3@azsol642.onmicrosoft.com"
+    },
+    {
+      "@odata.type": "#microsoft.graph.user",
+      "displayName": "Mr user2",
+      "id": "91afb70a-da8b-45a8-89b2-4a58b6e22df8",
+      "userPrincipalName": "user2@azsol642.onmicrosoft.com"
+    }
+  ],
+  "membershipRule": null,
+  "membershipRuleProcessingState": null,
+  "onPremisesSamAccountName": null,
+  "onPremisesSecurityIdentifier": null,
+  "onPremisesSyncEnabled": null,
+  "owners": [],
+  "preferredDataLocation": null,
+  "preferredLanguage": null,
+  "proxyAddresses": [],
+  "resourceProvisioningOptions": [],
+  "securityEnabled": true,
+  "securityIdentifier": "S-1-12-1-3998729639-1293373694-712475543-3400424274",
+  "theme": null,
+  "visibility": "Private"
+}

@@ -1,0 +1,32 @@
+{
+  "description": "Can read sign-in and audit reports.",
+  "displayName": "Reports Reader",
+  "id": "4a5d8f65-41da-4de4-8968-e035b65339cf",
+  "inheritsPermissionsFrom": [
+    {
+      "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+    }
+  ],
+  "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/v1.0/$metadata#roleManagement/directory/roleDefinitions('4a5d8f65-41da-4de4-8968-e035b65339cf')/inheritsPermissionsFrom",
+  "isBuiltIn": true,
+  "isEnabled": true,
+  "resourceScopes": [
+    "/"
+  ],
+  "rolePermissions": [
+    {
+      "allowedResourceActions": [
+        "microsoft.azure.serviceHealth/allEntities/allTasks",
+        "microsoft.directory/auditLogs/allProperties/read",
+        "microsoft.directory/provisioningLogs/allProperties/read",
+        "microsoft.directory/signInReports/allProperties/read",
+        "microsoft.office365.network/performance/allProperties/read",
+        "microsoft.office365.usageReports/allEntities/allProperties/read",
+        "microsoft.office365.webPortal/allEntities/standard/read"
+      ],
+      "condition": null
+    }
+  ],
+  "templateId": "4a5d8f65-41da-4de4-8968-e035b65339cf",
+  "version": "1"
+}

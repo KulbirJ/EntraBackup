@@ -1,0 +1,114 @@
+{
+  "addIns": [],
+  "api": {
+    "acceptMappedClaims": null,
+    "knownClientApplications": [],
+    "oauth2PermissionScopes": [],
+    "preAuthorizedApplications": [],
+    "requestedAccessTokenVersion": null
+  },
+  "appId": "9f47aa95-1148-4cf4-8514-b353b958de16",
+  "applicationTemplateId": null,
+  "appRoles": [],
+  "certification": null,
+  "createdByAppId": "18ed3507-a475-4ccb-b669-d66bc9f2a36e",
+  "createdDateTime": "2026-08-19T03:23:52.0000000Z",
+  "defaultRedirectUri": null,
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "entra-backup-ci",
+  "groupMembershipClaims": null,
+  "id": "e2807f10-a78a-464b-83df-cc6c09b4c24f",
+  "identifierUris": [],
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDeviceOnlyAuthSupported": null,
+  "isDisabled": null,
+  "isFallbackPublicClient": null,
+  "keyCredentials": [],
+  "nativeAuthenticationApisEnabled": null,
+  "notes": null,
+  "optionalClaims": null,
+  "parentalControlSettings": {
+    "countriesBlockedForMinors": [],
+    "legalAgeGroupRule": "Allow"
+  },
+  "passwordCredentials": [],
+  "publicClient": {
+    "redirectUris": []
+  },
+  "publisherDomain": "azsol642.onmicrosoft.com",
+  "requestSignatureVerification": null,
+  "requiredResourceAccess": [
+    {
+      "resourceAccess": [
+        {
+          "id": "e1fe6dd8-ba31-4d61-89e7-88639da4683d",
+          "type": "Scope"
+        },
+        {
+          "id": "9a5d68dd-52b0-4cc2-bd40-abcf44ac3a30",
+          "type": "Role"
+        },
+        {
+          "id": "5b567255-7703-4780-807c-7be8301ae99b",
+          "type": "Role"
+        },
+        {
+          "id": "498476ce-e0fe-48b0-b801-37ba7e2685c6",
+          "type": "Role"
+        },
+        {
+          "id": "246dd0d5-5bd0-4def-940b-0421030a5b68",
+          "type": "Role"
+        },
+        {
+          "id": "c7fbd983-d9aa-4fa7-84b8-17382c103bc4",
+          "type": "Role"
+        },
+        {
+          "id": "df021288-bdef-4463-88db-98f22de89214",
+          "type": "Role"
+        }
+      ],
+      "resourceAppId": "00000003-0000-0000-c000-000000000000"
+    }
+  ],
+  "samlMetadataUrl": null,
+  "serviceManagementReference": null,
+  "servicePrincipalLockConfiguration": {
+    "allProperties": true,
+    "credentialsWithUsageSign": true,
+    "credentialsWithUsageVerify": true,
+    "identifierUris": false,
+    "isEnabled": true,
+    "tokenEncryptionKeyId": true
+  },
+  "signInAudience": "AzureADMyOrg",
+  "spa": {
+    "redirectUris": []
+  },
+  "tags": [],
+  "tokenEncryptionKeyId": null,
+  "uniqueName": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  },
+  "web": {
+    "homePageUrl": null,
+    "implicitGrantSettings": {
+      "enableAccessTokenIssuance": false,
+      "enableIdTokenIssuance": false
+    },
+    "logoutUrl": null,
+    "redirectUris": [],
+    "redirectUriSettings": []
+  }
+}

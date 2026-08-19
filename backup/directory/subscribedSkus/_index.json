@@ -1,0 +1,10 @@
+{
+  "collection": "subscribedSkus",
+  "count": 2,
+  "idField": "skuId",
+  "items": {
+    "00ed1723-1992-4384-b7ce-1c3bf01eedc7": "Microsoft_Entra_ID_Governance_Step_Up_for_Microsoft_Entra_ID_P2",
+    "84a661c4-e949-4bd2-a560-ed7766fcaf2b": "AAD_PREMIUM_P2"
+  },
+  "layout": "per-object"
+}

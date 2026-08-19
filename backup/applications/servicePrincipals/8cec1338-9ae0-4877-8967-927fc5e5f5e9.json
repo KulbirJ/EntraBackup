@@ -1,0 +1,68 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "My Profile",
+  "appId": "8c59ead7-d703-4a27-9e55-c96a0054c8d2",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-18T22:10:36.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "My Profile",
+  "homepage": null,
+  "id": "8cec1338-9ae0-4877-8967-927fc5e5f5e9",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": "https://myaccount.microsoft.com/logout",
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [
+    "https://myprofile.microsoft.com",
+    "https://myaccount.microsoft.com",
+    "https://myworkaccount.microsoft.com",
+    "https://myaccount.azure.us",
+    "https://myaccount.microsoft.com/redirect.html",
+    "https://myprofile.microsoft.com/redirect.html",
+    "https://myworkaccount.microsoft.com/redirect.html",
+    "https://myaccount.azure.us/redirect.html",
+    "https://myaccount.microsoft.com/blank.html",
+    "https://myprofile.microsoft.com/blank.html",
+    "https://myworkaccount.microsoft.com/blank.html",
+    "https://myaccount.azure.us/blank.html"
+  ],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "8c59ead7-d703-4a27-9e55-c96a0054c8d2"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [
+    "disableAcceptingTenantedPassthroughTokens",
+    "disableRequestingTenantedPassthroughTokens"
+  ],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

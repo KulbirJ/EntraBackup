@@ -1,0 +1,24 @@
+{
+  "description": "Read data from Microsoft 365 when accessing from the Microsoft Purview portal.",
+  "displayName": "Purview Workload Content Reader",
+  "id": "e07494ad-1654-4dd2-922e-6f81a71bf00f",
+  "inheritsPermissionsFrom": [
+    {
+      "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+    }
+  ],
+  "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/v1.0/$metadata#roleManagement/directory/roleDefinitions('e07494ad-1654-4dd2-922e-6f81a71bf00f')/inheritsPermissionsFrom",
+  "isBuiltIn": true,
+  "isEnabled": true,
+  "resourceScopes": [
+    "/"
+  ],
+  "rolePermissions": [
+    {
+      "allowedResourceActions": [],
+      "condition": null
+    }
+  ],
+  "templateId": "e07494ad-1654-4dd2-922e-6f81a71bf00f",
+  "version": "1"
+}

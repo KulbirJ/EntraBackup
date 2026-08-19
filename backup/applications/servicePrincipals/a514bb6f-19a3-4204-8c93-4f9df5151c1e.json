@@ -1,0 +1,69 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Policy Administration Service",
+  "appId": "0469d4cd-df37-4d93-8a61-f8c75b809164",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-18T22:06:59.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Policy Administration Service",
+  "homepage": null,
+  "id": "a514bb6f-19a3-4204-8c93-4f9df5151c1e",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [
+    {
+      "adminConsentDescription": "Allow full access to the Microsoft Authorization Service on behalf of the signed-in user",
+      "adminConsentDisplayName": "Have full access to the Microsoft Authorization Service",
+      "id": "e1e4ebc7-1bb4-4ccc-8394-895d471ba1a7",
+      "isEnabled": true,
+      "type": "User",
+      "userConsentDescription": "Allow full access to the Microsoft Authorization Service on your behalf",
+      "userConsentDisplayName": "Have full access to the Microsoft Authorization Service",
+      "value": "user_impersonation"
+    }
+  ],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [
+    "https://pas.windows.net",
+    "https://pas.windows.net/"
+  ],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "0469d4cd-df37-4d93-8a61-f8c75b809164",
+    "https://authorization.microsoft.com",
+    "https://pas.windows.net",
+    "https://pas.windows.net/"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

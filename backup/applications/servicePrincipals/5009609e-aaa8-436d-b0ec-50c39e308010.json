@@ -1,0 +1,70 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "OfficeClientService",
+  "appId": "0f698dd4-f011-4d23-a33e-b36416dcb1e6",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-18T22:07:53.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "OfficeClientService",
+  "homepage": null,
+  "id": "5009609e-aaa8-436d-b0ec-50c39e308010",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [
+    {
+      "adminConsentDescription": "Legacy scope used by Office Client",
+      "adminConsentDisplayName": "user_impersonation",
+      "id": "4003e653-ac3b-43c3-af2c-a49553838842",
+      "isEnabled": false,
+      "type": "User",
+      "userConsentDescription": "Legacy scope used by Office Client",
+      "userConsentDisplayName": "user_impersonation",
+      "value": "user_impersonation"
+    }
+  ],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "0f698dd4-f011-4d23-a33e-b36416dcb1e6",
+    "https://office.microsoft.com",
+    "https://officeapps.live.com",
+    "https://ols.officeapps.live.com"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [
+    "disableAcceptingTenantedPassthroughTokens",
+    "disableLegacyUserImpersonationClient",
+    "disableRequestingTenantedPassthroughTokens"
+  ],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

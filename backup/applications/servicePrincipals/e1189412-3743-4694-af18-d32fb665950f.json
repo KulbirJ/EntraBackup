@@ -1,0 +1,64 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "CloudLicensingSystem",
+  "appId": "de247707-4e4a-47d6-89fd-3c632f870b34",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-18T22:07:46.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "CloudLicensingSystem",
+  "homepage": null,
+  "id": "e1189412-3743-4694-af18-d32fb665950f",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [
+    {
+      "adminConsentDescription": "this allows admin to view or assign asset",
+      "adminConsentDisplayName": "Read or Write all assets",
+      "id": "703f6192-642a-4e6b-8f6b-0820e6127784",
+      "isEnabled": true,
+      "type": "Admin",
+      "userConsentDescription": "this allows admin to view or assign asset",
+      "userConsentDisplayName": "Read or Write all assets",
+      "value": "Assets.ReadWrite.All"
+    }
+  ],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "de247707-4e4a-47d6-89fd-3c632f870b34",
+    "https://cloudlicensing.microsoft.com"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

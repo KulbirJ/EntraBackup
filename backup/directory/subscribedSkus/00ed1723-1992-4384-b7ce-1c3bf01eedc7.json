@@ -1,0 +1,28 @@
+{
+  "accountId": "19a113ce-a488-46f1-aedc-757a591bad61",
+  "accountName": "azsol642",
+  "appliesTo": "User",
+  "capabilityStatus": "Enabled",
+  "consumedUnits": 0,
+  "id": "19a113ce-a488-46f1-aedc-757a591bad61_00ed1723-1992-4384-b7ce-1c3bf01eedc7",
+  "prepaidUnits": {
+    "enabled": 25,
+    "lockedOut": 0,
+    "suspended": 0,
+    "warning": 0
+  },
+  "servicePlans": [
+    {
+      "appliesTo": "User",
+      "provisioningStatus": "Success",
+      "servicePlanId": "e866a266-3cff-43a3-acca-0c90a7e00c8b",
+      "servicePlanName": "Entra_Identity_Governance",
+      "servicePlanType": "AADPremiumService"
+    }
+  ],
+  "skuId": "00ed1723-1992-4384-b7ce-1c3bf01eedc7",
+  "skuPartNumber": "Microsoft_Entra_ID_Governance_Step_Up_for_Microsoft_Entra_ID_P2",
+  "subscriptionIds": [
+    "ad750629-6a50-4199-aaed-1948681d092e"
+  ]
+}

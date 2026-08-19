@@ -1,0 +1,32 @@
+{
+  "description": "Can read and manage compliance configuration and reports in Microsoft Entra ID and Microsoft 365.",
+  "displayName": "Compliance Administrator",
+  "id": "17315797-102d-40b4-93e0-432062caca18",
+  "inheritsPermissionsFrom": [
+    {
+      "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+    }
+  ],
+  "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/v1.0/$metadata#roleManagement/directory/roleDefinitions('17315797-102d-40b4-93e0-432062caca18')/inheritsPermissionsFrom",
+  "isBuiltIn": true,
+  "isEnabled": true,
+  "resourceScopes": [
+    "/"
+  ],
+  "rolePermissions": [
+    {
+      "allowedResourceActions": [
+        "microsoft.azure.serviceHealth/allEntities/allTasks",
+        "microsoft.azure.supportTickets/allEntities/allTasks",
+        "microsoft.directory/entitlementManagement/allProperties/read",
+        "microsoft.office365.complianceManager/allEntities/allTasks",
+        "microsoft.office365.serviceHealth/allEntities/allTasks",
+        "microsoft.office365.supportTickets/allEntities/allTasks",
+        "microsoft.office365.webPortal/allEntities/standard/read"
+      ],
+      "condition": null
+    }
+  ],
+  "templateId": "17315797-102d-40b4-93e0-432062caca18",
+  "version": "1"
+}

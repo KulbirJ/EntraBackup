@@ -1,0 +1,159 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Signup",
+  "appId": "b4bddae8-ab25-483e-8670-df09b9f1d0ea",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allows apps to call ModernPostPurchaseProvisioning API",
+      "displayName": "ModernPostPurchaseProvisioning.Execute",
+      "id": "8339ddc4-fc04-4ad0-b7d5-b7d83667da93",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "ModernPostPurchaseProvisioning.Execute"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allows the apps to create tenant, save tenant profile and add company tags",
+      "displayName": "Tenant.Create",
+      "id": "fca3dabc-fd9a-4d63-bc1f-196bfa2df787",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "Tenant.Create"
+    }
+  ],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-18T22:05:40.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Signup",
+  "homepage": null,
+  "id": "d7334ea1-e8e9-48a4-ac01-0cf1b19bd441",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": "https://signup.microsoft.com/logout",
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [
+    {
+      "adminConsentDescription": "Allows the caller to perform low friction trial for the given user.",
+      "adminConsentDisplayName": "LowFriction.ReadWrite",
+      "id": "0ec94f6b-7dfb-43d3-a076-648593587760",
+      "isEnabled": true,
+      "type": "User",
+      "userConsentDescription": "Allows the caller to perform low friction trial for the given user.",
+      "userConsentDisplayName": "LowFriction.ReadWrite",
+      "value": "LowFriction.ReadWrite"
+    },
+    {
+      "adminConsentDescription": "Allows the caller to perform product signup eligibility check for the given user",
+      "adminConsentDisplayName": "Users.Signup.Product",
+      "id": "62c3283a-e0b2-4608-85d5-013e99604063",
+      "isEnabled": true,
+      "type": "User",
+      "userConsentDescription": "Allows the caller to perform product signup eligibility check for the given user",
+      "userConsentDisplayName": "Users.Signup.Product",
+      "value": "Users.Signup.Product"
+    },
+    {
+      "adminConsentDescription": "Allows the app to send distributed emails to impacted users post system outage",
+      "adminConsentDisplayName": "Soar.SendEmail",
+      "id": "83e1ccc9-47d7-4632-8fbd-1a4392c87254",
+      "isEnabled": true,
+      "type": "User",
+      "userConsentDescription": "This allows the app to send distributed emails to impacted users post system outage",
+      "userConsentDisplayName": "Send distributed emails",
+      "value": "Soar.SendEmail"
+    },
+    {
+      "adminConsentDescription": "Allows the app to assign license for a product",
+      "adminConsentDisplayName": "License.Assign",
+      "id": "8a82ad6b-9201-4f8e-a324-b97e0fcd3e46",
+      "isEnabled": true,
+      "type": "User",
+      "userConsentDescription": "Allows the app to assign license for a product",
+      "userConsentDisplayName": "License.Assign",
+      "value": "License.Assign"
+    },
+    {
+      "adminConsentDescription": "Allows the app to add managed subscriptions to a tenant",
+      "adminConsentDisplayName": "Add subscriptions",
+      "id": "dc13fe4e-f936-494b-8b88-09d4e9a5cde0",
+      "isEnabled": true,
+      "type": "Admin",
+      "userConsentDescription": "Allows the app to add managed subscriptions to a tenant",
+      "userConsentDisplayName": "Add subscriptions",
+      "value": "Subscription.Add"
+    }
+  ],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [
+    "https://signup.microsoft.com/landing",
+    "https://signup.microsoft.com/",
+    "https://prv.signup.microsoft.com/landing",
+    "https://prv.signup.microsoft.com/"
+  ],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "b4bddae8-ab25-483e-8670-df09b9f1d0ea",
+    "https://ejp.signup.microsoft.com",
+    "https://ejp.signup.microsoft.com/",
+    "https://eus.signup.microsoft.com",
+    "https://eus.signup.microsoft.com/",
+    "https://ncu.prv.signup.microsoft.com",
+    "https://ncu.prv.signup.microsoft.com/",
+    "https://ncu.signup.microsoft.com",
+    "https://ncu.signup.microsoft.com/",
+    "https://neu.signup.microsoft.com",
+    "https://neu.signup.microsoft.com/",
+    "https://prv.signup.microsoft.com",
+    "https://prv.signup.microsoft.com/",
+    "https://scu.prv.signup.microsoft.com",
+    "https://scu.prv.signup.microsoft.com/",
+    "https://scu.signup.microsoft.com",
+    "https://scu.signup.microsoft.com/",
+    "https://sea.signup.microsoft.com",
+    "https://sea.signup.microsoft.com/",
+    "https://signup.microsoft.com",
+    "https://signup.microsoft.com/",
+    "https://svc.prv.signup.microsoft.com",
+    "https://svc.prv.signup.microsoft.com/",
+    "https://svc.signup.microsoft.com",
+    "https://svc.signup.microsoft.com/",
+    "https://weu.signup.microsoft.com",
+    "https://weu.signup.microsoft.com/",
+    "https://wus.signup.microsoft.com",
+    "https://wus.signup.microsoft.com/"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

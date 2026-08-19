@@ -1,0 +1,91 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Azure AD Notification",
+  "appId": "fc03f97a-9db0-4627-a216-ec98ce54e018",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-18T22:08:01.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Azure AD Notification",
+  "homepage": null,
+  "id": "6f8942fa-7881-4625-9da7-2a36450a0307",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [
+    {
+      "adminConsentDescription": "Allows a user to manage an application's notifications and templates..",
+      "adminConsentDisplayName": "Application.ReadWrite",
+      "id": "0a8cab7d-5369-41c7-ae0f-dc63a8f0465a",
+      "isEnabled": true,
+      "type": "User",
+      "userConsentDescription": "This allows a user to read and write application notifications and templates.",
+      "userConsentDisplayName": "Read and write applications.",
+      "value": "Application.ReadWrite"
+    },
+    {
+      "adminConsentDescription": "AD Notification Teams consent",
+      "adminConsentDisplayName": "AD Notification Teams consent",
+      "id": "0c80a1ae-d4a4-4dfc-acde-ec00fbf86fe8",
+      "isEnabled": true,
+      "type": "User",
+      "userConsentDescription": "AD Notification Teams consent",
+      "userConsentDisplayName": "AD Notification Teams consent",
+      "value": "access-as-user"
+    }
+  ],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [
+    "http://localhost",
+    "https://token.botframework.com/.auth/web/redirect",
+    "brk-c44b4083-3bb0-49c1-b47d-974e53cbdf3c://portal.azure.com",
+    "brk-c44b4083-3bb0-49c1-b47d-974e53cbdf3c://entra.microsoft.com",
+    "brk-c44b4083-3bb0-49c1-b47d-974e53cbdf3c://canary.portal.azure.com",
+    "brk-c44b4083-3bb0-49c1-b47d-974e53cbdf3c://canary.entra.microsoft.com"
+  ],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "api://botid-0573f3c6-f9b5-4eeb-9045-f053f7b5268d",
+    "api://botid-6b3e11a5-f8f2-4c7a-bbf9-a4b9b9f1e4de",
+    "api://botid-7e6fef82-3ea4-444b-9d82-5225256772bc",
+    "api://botid-873f4300-3413-4bf7-b213-17ed31741df8",
+    "api://botid-8c3406b7-729d-4401-9aa2-9eb88cf68781",
+    "api://botid-b0b5ae22-0dfe-48c4-8637-ae56d45b3ba8",
+    "api://botid-dca72f77-b157-4ce3-b119-653a7d1b5adf",
+    "api://botid-ddc4caf8-b2d3-4922-b4f2-448b4c4cc868",
+    "fc03f97a-9db0-4627-a216-ec98ce54e018"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [
+    "disableLegacyUserImpersonationClient",
+    "disableLegacyUserImpersonationResource"
+  ],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

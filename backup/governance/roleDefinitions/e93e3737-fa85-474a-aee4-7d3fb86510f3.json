@@ -1,0 +1,33 @@
+{
+  "description": "Manage all aspects of the Microsoft Dragon admin center.",
+  "displayName": "Dragon Administrator",
+  "id": "e93e3737-fa85-474a-aee4-7d3fb86510f3",
+  "inheritsPermissionsFrom": [
+    {
+      "id": "88d8e3e3-8f55-4a1e-953a-9b9898b8876b"
+    }
+  ],
+  "inheritsPermissionsFrom@odata.context": "https://graph.microsoft.com/v1.0/$metadata#roleManagement/directory/roleDefinitions('e93e3737-fa85-474a-aee4-7d3fb86510f3')/inheritsPermissionsFrom",
+  "isBuiltIn": true,
+  "isEnabled": true,
+  "resourceScopes": [
+    "/"
+  ],
+  "rolePermissions": [
+    {
+      "allowedResourceActions": [
+        "microsoft.azure.serviceHealth/allEntities/allTasks",
+        "microsoft.azure.supportTickets/allEntities/allTasks",
+        "microsoft.healthPlatform/allEntities/allProperties/allTasks",
+        "microsoft.office365.network/performance/allProperties/read",
+        "microsoft.office365.serviceHealth/allEntities/allTasks",
+        "microsoft.office365.supportTickets/allEntities/allTasks",
+        "microsoft.office365.usageReports/allEntities/allProperties/read",
+        "microsoft.office365.webPortal/allEntities/standard/read"
+      ],
+      "condition": null
+    }
+  ],
+  "templateId": "e93e3737-fa85-474a-aee4-7d3fb86510f3",
+  "version": "1"
+}

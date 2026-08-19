@@ -1,0 +1,9 @@
+{
+  "collection": "applications",
+  "count": 1,
+  "idField": "id",
+  "items": {
+    "e2807f10-a78a-464b-83df-cc6c09b4c24f": "entra-backup-ci"
+  },
+  "layout": "per-object"
+}
