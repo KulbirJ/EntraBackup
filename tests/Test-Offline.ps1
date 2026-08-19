@@ -28,12 +28,12 @@ $repoRoot = Split-Path -Parent $testRoot
 # 'scripts\lib' would be one directory name there rather than two. CI runs on Ubuntu.
 $libPath  = Join-Path (Join-Path $repoRoot 'scripts') 'lib'
 
-# Collector is imported before its dependencies on purpose: it re-imports them with
-# -Force, which drops them from this scope, so Normalize is imported after it.
-Import-Module (Join-Path $libPath 'SafetyGuard.psm1') -Force -DisableNameChecking
-Import-Module (Join-Path $libPath 'Collector.psm1')   -Force -DisableNameChecking
+# Same order the entry script uses: leaf modules first, so Collector reuses these exact
+# instances rather than loading its own. Tested explicitly further down.
 Import-Module (Join-Path $libPath 'GraphClient.psm1') -Force -DisableNameChecking
 Import-Module (Join-Path $libPath 'Normalize.psm1')   -Force -DisableNameChecking
+Import-Module (Join-Path $libPath 'SafetyGuard.psm1') -Force -DisableNameChecking
+Import-Module (Join-Path $libPath 'Collector.psm1')   -Force -DisableNameChecking
 
 $script:Pass = 0
 $script:Fail = 0
@@ -76,6 +76,26 @@ function Set-Mock {
 $settings = @{ ShardThreshold = 2000; ShardCount = 16; MaxChildFetchParents = 5000 }
 
 try {
+    # --------------------------------------------------------- module wiring --
+    # Guards a bug the rest of this file cannot see: every other test mocks
+    # Get-GraphCollection inside Collector, so a Collector that talks to a DIFFERENT
+    # GraphClient instance than the entry script initialised still passes them all --
+    # and then fails against a real tenant with "Graph client not initialised".
+    Write-Host "`
+Module wiring" -ForegroundColor Cyan
+
+    Assert-That -Name 'exactly one GraphClient instance is loaded' `
+        -Condition ((@(Get-Module GraphClient)).Count -eq 1) `
+        -Detail "found $((@(Get-Module GraphClient)).Count) instances"
+
+    Initialize-GraphClient -TokenProvider {
+        [pscustomobject]@{ AccessToken = 'sentinel-token'; ExpiresOn = [datetime]::UtcNow.AddHours(1) }
+    }
+    $seenByCollector = & $collectorModule { Get-CurrentAccessToken }
+    Assert-That -Name 'Collector reaches the client the entry script initialised' `
+        -Condition ($seenByCollector -eq 'sentinel-token') `
+        -Detail "Collector saw '$seenByCollector'"
+
     # ------------------------------------------------------------ determinism --
     Write-Host "`nDeterminism" -ForegroundColor Cyan
 

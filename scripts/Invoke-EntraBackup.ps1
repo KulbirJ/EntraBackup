@@ -55,14 +55,18 @@ if (-not $BackupRoot) { $BackupRoot = Join-Path $repoRoot 'backup' }
 $libRoot    = Join-Path $scriptRoot 'lib'
 $configRoot = Join-Path $repoRoot 'config'
 
-# Import order matters. Collector.psm1 re-imports GraphClient and Normalize with
-# -Force, which unloads them from THIS scope; importing those two afterwards puts them
-# back so Write-NormalizedJsonFile and Get-GraphCollection resolve here as well.
+# Import order matters, and leaf modules must come FIRST.
+#
+# Module state is per-instance. GraphClient holds the access token and token provider in
+# its own scope, so if Collector were to load a second instance of it, Initialize-GraphClient
+# below would configure one instance while every collection call reached the other.
+# Loading GraphClient and Normalize up front means Collector's own (non -Force) imports
+# resolve to these exact instances, and there is one shared client throughout.
+Import-Module (Join-Path $libRoot 'GraphClient.psm1') -Force -DisableNameChecking
+Import-Module (Join-Path $libRoot 'Normalize.psm1')   -Force -DisableNameChecking
 Import-Module (Join-Path $libRoot 'Auth.psm1')        -Force -DisableNameChecking
 Import-Module (Join-Path $libRoot 'SafetyGuard.psm1') -Force -DisableNameChecking
 Import-Module (Join-Path $libRoot 'Collector.psm1')   -Force -DisableNameChecking
-Import-Module (Join-Path $libRoot 'GraphClient.psm1') -Force -DisableNameChecking
-Import-Module (Join-Path $libRoot 'Normalize.psm1')   -Force -DisableNameChecking
 
 $settings  = Import-PowerShellDataFile -Path (Join-Path $configRoot 'settings.psd1')
 $manifest  = Import-PowerShellDataFile -Path (Join-Path $configRoot 'endpoints.psd1')

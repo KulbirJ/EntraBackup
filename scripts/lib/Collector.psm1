@@ -21,8 +21,16 @@
 Set-StrictMode -Version Latest
 
 $here = Split-Path -Parent $MyInvocation.MyCommand.Path
-Import-Module (Join-Path $here 'GraphClient.psm1') -Force -DisableNameChecking
-Import-Module (Join-Path $here 'Normalize.psm1')   -Force -DisableNameChecking
+
+# Imported WITHOUT -Force, deliberately.
+#
+# -Force here would load a second, separate instance of GraphClient rather than reuse
+# the one the caller already set up. Module state is per-instance, so Initialize-GraphClient
+# called by the entry script would configure one instance while every collection call from
+# this module reached the other -- which fails with "Graph client not initialised" only
+# against a real tenant, since the offline tests mock this exact seam.
+Import-Module (Join-Path $here 'GraphClient.psm1') -DisableNameChecking
+Import-Module (Join-Path $here 'Normalize.psm1')   -DisableNameChecking
 
 function Get-ShardName {
     <#
