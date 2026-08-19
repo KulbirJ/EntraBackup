@@ -20,6 +20,7 @@ on:
 permissions:
   id-token: write   # required for the OIDC federated credential exchange
   contents: write   # required to commit the snapshot back to the repo
+  issues:   write   # required to raise an issue on security-relevant changes
 
 concurrency:
   # Two overlapping runs would race on the same files and produce a corrupt commit.
@@ -140,6 +141,10 @@ jobs:
 
       - name: Raise an issue for security-relevant changes
         if: steps.stage.outputs.has_changes == 'true' && steps.risk.outputs.high_risk == 'true'
+        # The snapshot is already committed and pushed by this point. Failing to raise a
+        # notification must not mark the backup as failed -- the findings still reach the
+        # run summary below either way.
+        continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
         shell: pwsh
@@ -148,16 +153,21 @@ jobs:
           $sha   = (git rev-parse --short HEAD).Trim()
           $body  = Get-Content ./high-risk-report.md -Raw
           $body += "`n`nCommit: ${{ github.server_url }}/${{ github.repository }}/commit/$sha"
+          $title = "Security-relevant Entra changes on $date"
 
-          gh issue create `
-            --title "Security-relevant Entra changes on $date" `
-            --body  $body `
-            --label 'entra-change' 2>&1 | Write-Host
+          # Labelling is attempted first but the label may not exist in a fresh repo, and
+          # gh fails the whole call rather than just dropping the label.
+          gh issue create --title $title --body $body --label 'entra-change' 2>&1 | Write-Host
 
-          # A missing label should not fail the run; the snapshot is already committed.
           if ($LASTEXITCODE -ne 0) {
-            Write-Warning 'Could not create the issue with a label; retrying without one.'
-            gh issue create --title "Security-relevant Entra changes on $date" --body $body
+            Write-Warning 'Labelled issue creation failed; retrying without a label.'
+            gh issue create --title $title --body $body 2>&1 | Write-Host
+          }
+
+          if ($LASTEXITCODE -ne 0) {
+            Write-Warning 'Could not create an issue. Check that Settings > Actions > Workflow permissions allows read and write access. The findings are in the run summary regardless.'
+            "> Note: an issue could not be created for these findings (insufficient token permission)." |
+              Out-File $env:GITHUB_STEP_SUMMARY -Append -Encoding utf8
           }
 
       - name: Report no-change runs
