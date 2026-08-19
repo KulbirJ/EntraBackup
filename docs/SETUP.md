@@ -104,21 +104,63 @@ verbatim, including the `@<numeric-id>` segments if present.
 
 ### 4b. Create the credential
 
-Portal route — app registration → **Certificates & secrets** → **Federated credentials**
-→ **Add credential** → scenario **GitHub Actions deploying Azure resources**. Fill in
-organisation, repository, and entity type *Branch* with name `main`, then **compare the
-generated subject against what the probe printed**. If they differ, switch the credential
-to a custom subject and paste the probe's value.
+> **A personal GitHub account is fine.** The portal's **Organization** field means the
+> GitHub *account owner*, not a GitHub organization — for a personal account it is simply
+> your username (`KulbirJ`). You do not need to belong to an organization.
 
-CLI route, if you have the Azure CLI available:
+**Use the "Other issuer" scenario, not the GitHub one.** The guided *GitHub Actions
+deploying Azure resources* scenario builds the subject for you in the legacy name-based
+format (`repo:KulbirJ/EntraBackup:ref:refs/heads/main`). This repository was created
+after 15 July 2026, so GitHub issues the immutable format instead, and the guided
+scenario's value will not match.
 
-```bash
-az ad app federated-credential create --id <APP_OBJECT_ID> --parameters '{
-  "name": "entra-backup-main",
-  "issuer": "https://token.actions.githubusercontent.com",
-  "subject": "<PASTE THE SUBJECT FROM THE PROBE>",
-  "audiences": ["api://AzureADTokenExchange"]
-}'
+App registration → **Certificates & secrets** → **Federated credentials** →
+**Add credential** → scenario **Other issuer**:
+
+| Field | Value |
+|---|---|
+| Issuer | `https://token.actions.githubusercontent.com` |
+| Subject identifier | **paste the `subject` from the probe, verbatim** |
+| Name | `entra-backup-main` |
+| Audience | `api://AzureADTokenExchange` |
+
+If you do use the guided GitHub scenario, compare its generated subject against the
+probe output before saving, and switch to **Other issuer** if they differ.
+
+#### Creating it without the portal
+
+The Azure CLI route (`az ad app federated-credential create`) needs `az`, which is not
+installed here. Federated credentials are also just a Graph resource, so this repo's own
+modules can create one — run from the repository root:
+
+```powershell
+Import-Module .\scripts\lib\Auth.psm1        -Force -DisableNameChecking
+Import-Module .\scripts\lib\GraphClient.psm1 -Force -DisableNameChecking
+
+# Application.ReadWrite.All is a write scope, so it must be requested explicitly --
+# the device-code defaults in Auth.psm1 are read-only.
+$token = Get-EntraTokenFromDeviceCode -Scopes @('Application.ReadWrite.All')
+Initialize-GraphClient -TokenProvider { $token }.GetNewClosure()
+
+# The app's OBJECT id (Overview blade), not the client id.
+$appObjectId = '<APP_OBJECT_ID>'
+
+$credential = @{
+    name      = 'entra-backup-main'
+    issuer    = 'https://token.actions.githubusercontent.com'
+    subject   = '<PASTE THE SUBJECT FROM THE PROBE>'
+    audiences = @('api://AzureADTokenExchange')
+} | ConvertTo-Json -Depth 10
+
+Invoke-GraphRequest -Method POST -Body $credential `
+    -Uri "/v1.0/applications/$appObjectId/federatedIdentityCredentials"
+```
+
+Verify what ended up on the app:
+
+```powershell
+(Invoke-GraphRequest -Uri "/v1.0/applications/$appObjectId/federatedIdentityCredentials").value |
+    Select-Object name, subject, issuer
 ```
 
 ---
