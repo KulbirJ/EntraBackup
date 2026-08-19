@@ -32,7 +32,10 @@ function Test-BackupSafety {
     #>
     [CmdletBinding()]
     param(
-        [Parameter(Mandatory)] [AllowNull()] [string] $PreviousRunPath,
+        # AllowEmptyString as well as AllowNull: the first run passes $null, which
+        # PowerShell coerces to '' for a [string] parameter, and Mandatory rejects the
+        # empty string even when AllowNull is present.
+        [Parameter(Mandatory)] [AllowNull()] [AllowEmptyString()] [string] $PreviousRunPath,
         [Parameter(Mandatory)] [hashtable] $CurrentCounts,
         [double] $MaxShrinkFraction = 0.20,
         [bool] $FailOnEmptyCollection = $true,

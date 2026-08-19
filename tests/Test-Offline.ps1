@@ -211,6 +211,11 @@ Module wiring" -ForegroundColor Cyan
     $firstRun = Test-BackupSafety -PreviousRunPath (Join-Path $sandbox 'nope.json') -CurrentCounts @{ users=5 }
     Assert-That -Name 'first run has no baseline and passes' -Condition ($firstRun.Passed -and $firstRun.IsFirstRun)
 
+    # The entry script passes $null on a genuine first run, not a path that happens to
+    # be missing -- and $null binds differently to a [string] parameter.
+    $nullRun = Test-BackupSafety -PreviousRunPath $null -CurrentCounts @{ users=5 }
+    Assert-That -Name 'a null baseline path is accepted' -Condition ($nullRun.Passed -and $nullRun.IsFirstRun)
+
     # ------------------------------------------------------------- singleton --
     Write-Host "`nSingleton endpoints" -ForegroundColor Cyan
     Set-Mock -Uri '/v1.0/policies/authorizationPolicy' -Data @([pscustomobject]@{ id='authorizationPolicy'; allowInvitesFrom='adminsAndGuestInviters' })
