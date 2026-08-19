@@ -24,7 +24,9 @@ $ErrorActionPreference = 'Stop'
 
 $testRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $repoRoot = Split-Path -Parent $testRoot
-$libPath  = Join-Path $repoRoot 'scripts\lib'
+# Segments joined individually: a backslash is a legal filename character on Linux, so
+# 'scripts\lib' would be one directory name there rather than two. CI runs on Ubuntu.
+$libPath  = Join-Path (Join-Path $repoRoot 'scripts') 'lib'
 
 # Collector is imported before its dependencies on purpose: it re-imports them with
 # -Force, which drops them from this scope, so Normalize is imported after it.
@@ -92,7 +94,7 @@ try {
     $r1 = Invoke-EndpointCollection -Endpoint $endpoint -BackupRoot $sandbox -Settings $settings
     Assert-That -Name 'first run writes both objects' -Condition ($r1.Count -eq 2 -and $r1.Written -eq 2)
 
-    $userDir = Join-Path $sandbox 'directory\users'
+    $userDir = Join-Path (Join-Path $sandbox 'directory') 'users'
     Assert-That -Name 'files are named by immutable id' `
         -Condition (Test-Path (Join-Path $userDir 'aaaaaaaa-0000-0000-0000-000000000001.json'))
     Assert-That -Name '_index.json generated' -Condition (Test-Path (Join-Path $userDir '_index.json'))
@@ -133,7 +135,7 @@ try {
     $shardSettings = @{ ShardThreshold = 10; ShardCount = 4; MaxChildFetchParents = 5000 }
 
     $s1 = Invoke-EndpointCollection -Endpoint $shardEndpoint -BackupRoot $sandbox -Settings $shardSettings
-    $groupDir = Join-Path $sandbox 'directory\groups'
+    $groupDir = Join-Path (Join-Path $sandbox 'directory') 'groups'
     $shardFiles = @(Get-ChildItem -Path $groupDir -Filter '*.ndjson')
     Assert-That -Name 'large collection switches to sharded layout' -Condition ($shardFiles.Count -eq 4)
 
@@ -148,16 +150,22 @@ try {
     Assert-That -Name 're-running rewrites no shard' -Condition ($s2.Written -eq 0) `
         -Detail "expected 0, got $($s2.Written)"
 
-    # Shard assignment must not depend on process-randomised hashing.
+    # Shard assignment must not depend on process-randomised hashing, so the same id is
+    # hashed again in a separate process and the two results compared.
+    #
+    # The host executable is resolved rather than hardcoded: 'powershell' exists only on
+    # Windows, and CI runs this on Linux where the host is 'pwsh'.
     $h1 = Get-ShardName -Id 'cccccccc-0000-0000-0000-000000000007' -ShardCount 4
-    $h2 = & powershell -NoProfile -ExecutionPolicy Bypass -Command `
-        "Import-Module '$libPath\Collector.psm1' -Force -DisableNameChecking; Get-ShardName -Id 'cccccccc-0000-0000-0000-000000000007' -ShardCount 4"
+    $psExe = if ($PSVersionTable.PSEdition -eq 'Core') { 'pwsh' } else { 'powershell' }
+    $collectorPath = Join-Path $libPath 'Collector.psm1'
+    $h2 = & $psExe -NoProfile -Command `
+        "Import-Module '$collectorPath' -Force -DisableNameChecking; Get-ShardName -Id 'cccccccc-0000-0000-0000-000000000007' -ShardCount 4"
     Assert-That -Name 'shard assignment is stable across processes' -Condition ($h1 -eq ($h2 | Select-Object -Last 1).Trim()) `
-        -Detail "this process: $h1 / separate process: $h2"
+        -Detail "this process ($psExe): $h1 / separate process: $h2"
 
     # ------------------------------------------------------------ safety guard --
     Write-Host "`nSafety guard" -ForegroundColor Cyan
-    $prevPath = Join-Path $sandbox '_meta\prev.json'
+    $prevPath = Join-Path (Join-Path $sandbox '_meta') 'prev.json'
     New-Item -ItemType Directory -Path (Split-Path $prevPath) -Force | Out-Null
     Write-NormalizedJsonFile -Path $prevPath -InputObject ([ordered]@{
         counts = [ordered]@{ users = 2000; groups = 50; conditionalAccessPolicies = 12 }
@@ -189,7 +197,7 @@ try {
     $singleEndpoint = @{ Name='authorizationPolicy'; Category='policies'; Mode='Singleton'; Uri='/v1.0/policies/authorizationPolicy' }
     $sg = Invoke-EndpointCollection -Endpoint $singleEndpoint -BackupRoot $sandbox -Settings $settings
     Assert-That -Name 'singleton writes settings.json' `
-        -Condition (Test-Path (Join-Path $sandbox 'policies\authorizationPolicy\settings.json'))
+        -Condition (Test-Path (Join-Path (Join-Path (Join-Path $sandbox 'policies') 'authorizationPolicy') 'settings.json'))
     $sg2 = Invoke-EndpointCollection -Endpoint $singleEndpoint -BackupRoot $sandbox -Settings $settings
     Assert-That -Name 'singleton is idempotent' -Condition ($sg2.Written -eq 0)
 }

@@ -49,17 +49,23 @@ $scriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $repoRoot   = Split-Path -Parent $scriptRoot
 if (-not $BackupRoot) { $BackupRoot = Join-Path $repoRoot 'backup' }
 
+# Path segments are joined one at a time rather than written as 'lib\Auth.psm1'. A
+# backslash is a legal filename character on Linux, so an embedded separator becomes
+# part of the name instead of a directory boundary -- and CI runs on Ubuntu.
+$libRoot    = Join-Path $scriptRoot 'lib'
+$configRoot = Join-Path $repoRoot 'config'
+
 # Import order matters. Collector.psm1 re-imports GraphClient and Normalize with
 # -Force, which unloads them from THIS scope; importing those two afterwards puts them
 # back so Write-NormalizedJsonFile and Get-GraphCollection resolve here as well.
-Import-Module (Join-Path $scriptRoot 'lib\Auth.psm1')        -Force -DisableNameChecking
-Import-Module (Join-Path $scriptRoot 'lib\SafetyGuard.psm1') -Force -DisableNameChecking
-Import-Module (Join-Path $scriptRoot 'lib\Collector.psm1')   -Force -DisableNameChecking
-Import-Module (Join-Path $scriptRoot 'lib\GraphClient.psm1') -Force -DisableNameChecking
-Import-Module (Join-Path $scriptRoot 'lib\Normalize.psm1')   -Force -DisableNameChecking
+Import-Module (Join-Path $libRoot 'Auth.psm1')        -Force -DisableNameChecking
+Import-Module (Join-Path $libRoot 'SafetyGuard.psm1') -Force -DisableNameChecking
+Import-Module (Join-Path $libRoot 'Collector.psm1')   -Force -DisableNameChecking
+Import-Module (Join-Path $libRoot 'GraphClient.psm1') -Force -DisableNameChecking
+Import-Module (Join-Path $libRoot 'Normalize.psm1')   -Force -DisableNameChecking
 
-$settings  = Import-PowerShellDataFile -Path (Join-Path $repoRoot 'config\settings.psd1')
-$manifest  = Import-PowerShellDataFile -Path (Join-Path $repoRoot 'config\endpoints.psd1')
+$settings  = Import-PowerShellDataFile -Path (Join-Path $configRoot 'settings.psd1')
+$manifest  = Import-PowerShellDataFile -Path (Join-Path $configRoot 'endpoints.psd1')
 $startTime = Get-Date
 
 if (-not $Category) { $Category = $settings.DefaultCategories }
@@ -101,7 +107,7 @@ catch {
 # ------------------------------------------------------------------- previous --
 # Read the prior run before collection overwrites anything, so the tripwire has a
 # baseline to compare against.
-$metaPath        = Join-Path $BackupRoot '_meta\run.json'
+$metaPath        = Join-Path (Join-Path $BackupRoot '_meta') 'run.json'
 $previousRunPath = if (Test-Path -LiteralPath $metaPath) { $metaPath } else { $null }
 
 # -------------------------------------------------------------------- collect --

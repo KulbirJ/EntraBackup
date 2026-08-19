@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh workflow *)",
+      "Bash(gh run *)",
+      "Bash(grep -avE \"^\\\\s*$\")",
+      "Bash(powershell -NoProfile -ExecutionPolicy Bypass -File ./tests/Test-Offline.ps1)",
+      "Bash(git add *)",
+      "Bash(git -c 'user.name=Kulbir Jaglan' -c user.email=15201253+KulbirJ@users.noreply.github.com commit -q -m ' *)",
+      "Bash(git push *)"
+    ]
+  }
+}

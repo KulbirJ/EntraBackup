@@ -12,7 +12,8 @@
     into the commit message and raise a GitHub issue.
 
 .PARAMETER Staged
-    Inspect staged changes (the default). Otherwise compares HEAD~1..HEAD.
+    Inspect staged changes -- what the workflow uses, since it runs between `git add`
+    and `git commit`. Without it, compares the range in -Range instead.
 
 .OUTPUTS
     Markdown report on stdout. Exit code 0 always -- this reports, it does not block.
@@ -20,7 +21,7 @@
 #>
 [CmdletBinding()]
 param(
-    [switch] $Staged = $true,
+    [switch] $Staged,
     [string] $Range = 'HEAD~1..HEAD'
 )
 
@@ -29,7 +30,7 @@ $ErrorActionPreference = 'Stop'
 
 $scriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $repoRoot   = Split-Path -Parent $scriptRoot
-$settings   = Import-PowerShellDataFile -Path (Join-Path $repoRoot 'config\settings.psd1')
+$settings   = Import-PowerShellDataFile -Path (Join-Path (Join-Path $repoRoot 'config') 'settings.psd1')
 
 $changes = if ($Staged) {
     git -C $repoRoot diff --cached --name-status
