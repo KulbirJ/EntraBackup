@@ -14,9 +14,11 @@
       NameField   Property surfaced in _index.json so humans can navigate.
       CountUri    Optional $count endpoint, used to size the tenant up front.
       Children    Sub-collections fetched per parent object ({id} is substituted).
-      Optional    When true, a 403/404 is logged and skipped rather than failing the
-                  run. Set on everything that depends on licensing (P1/P2/Intune) or
-                  on a feature the tenant may simply not use.
+      Optional    When true, a 400/403/404 is logged and skipped rather than failing
+                  the run. Set on everything that depends on licensing (P1/P2/Intune)
+                  or on a feature the tenant may simply not use.
+                  400 is in that set because Graph answers deviceManagement endpoints
+                  with 400 Bad Request -- not 403 -- on a tenant with no Intune.
       Notes       Shown in docs and in the run log.
 
     signInActivity is deliberately NOT selected on users: it requires AuditLog.Read.All,
@@ -213,7 +215,8 @@
             IdField   = 'id'
             NameField = 'clientId'
             Uri       = '/v1.0/oauth2PermissionGrants?$top=999'
-            Notes     = 'Delegated consent grants. New entries here are how most consent-phishing shows up.'
+            Optional  = $true
+            Notes     = 'Delegated consent grants -- new entries here are how most consent-phishing shows up, so this is worth having. Optional only because it needs DelegatedPermissionGrant.Read.All (or Directory.Read.All) on top of Application.Read.All, and returns 403 without it.'
         }
 
         # -------------------------------------------------------------- governance --

@@ -157,12 +157,25 @@ function Invoke-GraphRequest {
                 $statusCode = [int]$response.StatusCode
             }
 
-            # 403 and 404 are not transient. They mean a permission was never granted or
-            # the feature is not licensed in this tenant. Surface them as a typed error
-            # so the collector can skip that category instead of failing the whole run.
-            if ($statusCode -eq 403 -or $statusCode -eq 404) {
-                throw "$($script:PermissionErrorSentinel): Graph returned $statusCode for $Uri. " +
-                      "Check the app's application permissions and tenant licensing."
+            # 400, 403 and 404 are not transient, and all three mean "this tenant will
+            # never answer this request": a permission was never granted, or the feature
+            # is not present at all.
+            #
+            # 400 belongs in this set because Graph answers deviceManagement endpoints
+            # with 400 Bad Request -- not 403 -- when the tenant has no Intune
+            # subscription. Treating it as a hard fault made an unlicensed tenant
+            # unbackable.
+            #
+            # Marking them with the sentinel does not by itself skip anything: the
+            # collector still fails the run unless the endpoint is declared Optional, so
+            # a genuinely malformed query on a required endpoint is still loud.
+            if ($statusCode -eq 400 -or $statusCode -eq 403 -or $statusCode -eq 404) {
+                $reason = switch ($statusCode) {
+                    400 { 'the tenant may not have this feature enabled (for example, no Intune subscription), or the query is unsupported here' }
+                    403 { "the app is missing an application permission, or admin consent was not granted" }
+                    404 { 'the endpoint does not exist for this tenant' }
+                }
+                throw "$($script:PermissionErrorSentinel): Graph returned $statusCode for $Uri -- $reason."
             }
 
             $isRetryable = ($statusCode -eq 429 -or $statusCode -ge 500 -or $statusCode -eq 0)
