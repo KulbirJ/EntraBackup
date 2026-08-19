@@ -11,7 +11,14 @@
   "mail": null,
   "mailEnabled": false,
   "mailNickname": "f7d0c2ec-9",
-  "members": [],
+  "members": [
+    {
+      "@odata.type": "#microsoft.graph.user",
+      "displayName": "Mr user2",
+      "id": "91afb70a-da8b-45a8-89b2-4a58b6e22df8",
+      "userPrincipalName": "user2@azsol642.onmicrosoft.com"
+    }
+  ],
   "membershipRule": null,
   "membershipRuleProcessingState": null,
   "onPremisesSamAccountName": null,

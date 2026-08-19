@@ -3,10 +3,10 @@
     "applications": {
       "applicationFilter": null,
       "excludeApplications": [],
-      "includeApplications": [
-        "All"
+      "includeApplications": [],
+      "includeAuthenticationContextClassReferences": [
+        "c1"
       ],
-      "includeAuthenticationContextClassReferences": [],
       "includeUserActions": []
     },
     "authenticationFlows": null,
@@ -17,7 +17,17 @@
     "devices": null,
     "insiderRiskLevels": null,
     "locations": null,
-    "platforms": null,
+    "platforms": {
+      "excludePlatforms": [
+        "android",
+        "iOS",
+        "macOS",
+        "linux"
+      ],
+      "includePlatforms": [
+        "all"
+      ]
+    },
     "servicePrincipalRiskLevels": [],
     "signInRiskLevels": [],
     "userRiskLevels": [],
@@ -52,17 +62,46 @@
   "createdDateTime": "2026-08-19T03:49:22.4999309Z",
   "displayName": "Require multifactor authentication for admins",
   "grantControls": {
-    "authenticationStrength": null,
+    "authenticationStrength": {
+      "allowedCombinations": [
+        "windowsHelloForBusiness",
+        "fido2",
+        "x509CertificateMultiFactor",
+        "deviceBasedPush",
+        "temporaryAccessPassOneTime",
+        "temporaryAccessPassMultiUse",
+        "password,microsoftAuthenticatorPush",
+        "password,softwareOath",
+        "password,hardwareOath",
+        "password,sms",
+        "password,voice",
+        "federatedMultiFactor",
+        "microsoftAuthenticatorPush,federatedSingleFactor",
+        "softwareOath,federatedSingleFactor",
+        "hardwareOath,federatedSingleFactor",
+        "sms,federatedSingleFactor",
+        "voice,federatedSingleFactor"
+      ],
+      "combinationConfigurations": [],
+      "combinationConfigurations@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies('a6ea20c6-fc98-434e-bd45-26374c4dc9dc')/grantControls/authenticationStrength/combinationConfigurations",
+      "createdDateTime": "2021-12-01T08:00:00.0000000Z",
+      "description": "Combinations of methods that satisfy strong authentication, such as a password + SMS",
+      "displayName": "Multifactor authentication",
+      "id": "00000000-0000-0000-0000-000000000002",
+      "modifiedDateTime": "2021-12-01T08:00:00.0000000Z",
+      "policyType": "builtIn",
+      "requirementsSatisfied": "mfa"
+    },
     "authenticationStrength@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies('a6ea20c6-fc98-434e-bd45-26374c4dc9dc')/grantControls/authenticationStrength/$entity",
     "builtInControls": [
-      "mfa"
+      "compliantDevice"
     ],
     "customAuthenticationFactors": [],
     "operator": "OR",
     "termsOfUse": []
   },
   "id": "a6ea20c6-fc98-434e-bd45-26374c4dc9dc",
-  "modifiedDateTime": null,
+  "modifiedDateTime": "2026-08-19T14:34:19.4067558Z",
   "sessionControls": null,
   "state": "enabledForReportingButNotEnforced",
   "templateId": "c7503427-338e-4c5e-902d-abe252abfb43"

@@ -1,5 +1,5 @@
 {
-  "capturedAtUtc": "2026-08-19T03:59:04Z",
+  "capturedAtUtc": "2026-08-19T19:52:26Z",
   "categories": [
     "applications",
     "directory",
@@ -26,12 +26,12 @@
     "roleEligibilitySchedules": 4,
     "roleManagementPolicies": 145,
     "roleManagementPolicyAssignments": 145,
-    "servicePrincipals": 86,
+    "servicePrincipals": 90,
     "subscribedSkus": 2,
-    "users": 3
+    "users": 4
   },
-  "durationSeconds": 27,
-  "graphRequests": 132,
+  "durationSeconds": 26.2,
+  "graphRequests": 136,
   "schemaVersion": 1,
   "skippedEndpoints": [
     "accessReviewDefinitions",

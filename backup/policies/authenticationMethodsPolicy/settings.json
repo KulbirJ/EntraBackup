@@ -101,7 +101,7 @@
       "id": "TemporaryAccessPass",
       "includeTargets": [
         {
-          "id": "all_users",
+          "id": "0847a506-6432-478d-924e-f86a8d7b9939",
           "isRegistrationRequired": false,
           "targetType": "group"
         }
@@ -232,9 +232,9 @@
   "description": "The tenant-wide policy that controls which authentication methods are allowed in the tenant, authentication method registration requirements, and self-service password reset settings",
   "displayName": "Authentication Methods Policy",
   "id": "authenticationMethodsPolicy",
-  "lastModifiedDateTime": "2026-08-18T22:08:38.6492302Z",
+  "lastModifiedDateTime": "2026-08-19T17:29:51.6750091Z",
   "policyMigrationState": null,
-  "policyVersion": "2.0",
+  "policyVersion": "1.5",
   "registrationEnforcement": {
     "authenticationMethodsRegistrationCampaign": {
       "excludeTargets": [],

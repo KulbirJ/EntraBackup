@@ -1,6 +1,6 @@
 {
   "collection": "servicePrincipals",
-  "count": 86,
+  "count": 90,
   "idField": "id",
   "items": {
     "0733cc84-daac-4090-b442-8c6a210df7a5": "OCaaS Worker Services",
@@ -42,6 +42,7 @@
     "6d860816-7bb2-451c-9dba-4ae537b47aff": "M365AdminAgent",
     "6f8942fa-7881-4625-9da7-2a36450a0307": "Azure AD Notification",
     "72ed51c0-8981-48d9-b09e-b06958991f2c": "O365 Secure Score",
+    "753fe388-9311-4865-a832-337f7b1ea1a8": "Lifecycle Workflows",
     "7768e0ab-e711-45cc-8477-1a631291e73c": "Agent 365",
     "7ee66e82-3c45-450e-99f5-213353e88d4c": "Cortana at Work Service",
     "7f33cf44-7193-41ce-b46b-d1dcfb43024e": "Azure MFA StrongAuthenticationService",
@@ -56,9 +57,11 @@
     "a6f92224-cd97-4c72-ba81-f6255e0edbb9": "entra-backup-ci",
     "aa68a3ef-96d8-4b6f-a574-e2574f0f7621": "Office 365 Information Protection",
     "af7e77a9-6553-49ab-b5c7-557973bc535e": "O365 Demeter",
+    "b73c1e54-22f0-41dd-be7e-cebbf9b83f4e": "ExchangeRevocationSync",
     "b8c5e655-c49b-4928-8d5e-1f6bc6bcb06d": "CPIM Service",
     "c0d7acf2-e202-4524-b168-88a1e7aa9543": "Microsoft Graph",
     "c3d2fb22-579d-4d40-b7d6-7438275d480b": "Device Registration Service",
+    "c483c816-93ea-4253-ac90-d5dde65249db": "IAMTenantCrawler",
     "c5bb0720-b9cf-4861-93a8-e2acbdf1c6d0": "Azure Resource Manager",
     "c6fe2734-9bbc-40db-9c8a-1d2eb2a1f66a": "IPSubstrate",
     "c8116cf4-abb7-4b3a-b22d-4cb202d4b3cb": "Microsoft Cloud App Security",
@@ -87,6 +90,7 @@
     "f4d5aef1-af4a-4a37-84c1-9018bf9a18ec": "OCaaS Client Interaction Service",
     "f699b9b7-6477-4b4a-a2e0-c16bfadd0616": "o365.servicecommunications.microsoft.com",
     "fa83dee9-d1fd-4ff6-ba6b-7cff94f8fe72": "OCaaS Experience Management Service",
+    "fb387cf4-5fb1-4215-aa9b-ef028515f9ae": "Office 365 Search Service",
     "fd626c6f-1836-40bb-bca2-54c4fb417282": "Azure Signup Api",
     "fffd98b6-12d4-457b-98d9-70dd5bb75f78": "MCAPI Authorization Prod"
   },
