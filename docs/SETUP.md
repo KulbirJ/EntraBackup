@@ -170,9 +170,20 @@ Verify what ended up on the app:
 Variables, not secrets — both are non-sensitive identifiers, and no secret is involved
 anywhere in this design.
 
+Substitute the real GUIDs. Do **not** keep the angle brackets — they are placeholder
+markers, not syntax, and a value like `<19a113ce-…>` produces a bare HTTP 400 from Entra
+with no indication of which value is wrong. The workflows now check the format up front
+and say so plainly, but it is easier not to hit it.
+
 ```powershell
-gh variable set AZURE_TENANT_ID --body "<directory-tenant-id>"
-gh variable set AZURE_CLIENT_ID --body "<application-client-id>"
+gh variable set AZURE_TENANT_ID --body "19a113ce-a488-46f1-aedc-757a591bad61"
+gh variable set AZURE_CLIENT_ID --body "9f47aa95-1148-4cf4-8514-b353b958de16"
+```
+
+Confirm they landed clean:
+
+```powershell
+gh api repos/OWNER/REPO/actions/variables --jq '.variables[] | "\(.name) = [\(.value)]"'
 ```
 
 ---

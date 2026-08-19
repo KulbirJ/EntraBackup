@@ -93,6 +93,16 @@ jobs:
           Import-Module ./scripts/lib/Auth.psm1        -Force -DisableNameChecking
           Import-Module ./scripts/lib/GraphClient.psm1 -Force -DisableNameChecking
 
+          # Catch a malformed variable here, where the message can say so plainly. Entra
+          # answers a bad tenant or client id with a bare 400 and no indication which.
+          $guid = '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+          foreach ($n in 'AZURE_TENANT_ID', 'AZURE_CLIENT_ID') {
+            $val = [Environment]::GetEnvironmentVariable($n)
+            if ($val -notmatch $guid) {
+              throw "$n is not a valid GUID: '$val'. If it still has angle brackets, the placeholder was copied literally."
+            }
+          }
+
           $provider = Get-EntraTokenProvider -Mode OIDC `
               -TenantId $env:AZURE_TENANT_ID -ClientId $env:AZURE_CLIENT_ID
           Initialize-GraphClient -TokenProvider $provider

@@ -39,8 +39,25 @@ jobs:
       - name: Verify configuration
         shell: pwsh
         run: |
-          if (-not '${{ vars.AZURE_TENANT_ID }}') { throw 'Repository variable AZURE_TENANT_ID is not set. See docs/SETUP.md.' }
-          if (-not '${{ vars.AZURE_CLIENT_ID }}') { throw 'Repository variable AZURE_CLIENT_ID is not set. See docs/SETUP.md.' }
+          # Format-checked, not just presence-checked. Pasting a placeholder complete
+          # with its angle brackets is an easy mistake, and Entra's only response is a
+          # bare HTTP 400 that gives no hint which value is malformed.
+          $guid = '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+
+          foreach ($v in @(
+            @{ Name = 'AZURE_TENANT_ID'; Value = '${{ vars.AZURE_TENANT_ID }}' }
+            @{ Name = 'AZURE_CLIENT_ID'; Value = '${{ vars.AZURE_CLIENT_ID }}' }
+          )) {
+            if (-not $v.Value) {
+              throw "Repository variable $($v.Name) is not set. See docs/SETUP.md."
+            }
+            if ($v.Value -notmatch $guid) {
+              throw "Repository variable $($v.Name) is not a valid GUID: '$($v.Value)'. " +
+                    "If it still has angle brackets around it, the placeholder was copied literally. " +
+                    "Fix with: gh variable set $($v.Name) --body <the-guid-with-no-brackets>"
+            }
+          }
+          Write-Host 'Configuration looks valid.'
 
       - name: Run offline regression tests
         shell: pwsh
