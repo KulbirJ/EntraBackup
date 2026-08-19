@@ -1,0 +1,15 @@
+# Snapshot files are written with LF and must stay that way. Without this, a Windows
+# clone with core.autocrlf=true rewrites every line ending on checkout and the next
+# backup run sees the whole snapshot as modified.
+* text=auto eol=lf
+
+*.json   text eol=lf
+*.ndjson text eol=lf
+*.ps1    text eol=lf
+*.psm1   text eol=lf
+*.psd1   text eol=lf
+*.md     text eol=lf
+*.yml    text eol=lf
+
+# Collapse snapshot data in PR views -- it is generated output, not hand-written code.
+backup/** linguist-generated=true

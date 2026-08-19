@@ -1,0 +1,151 @@
+name: Entra Backup
+
+on:
+  schedule:
+    # 03:00 UTC daily. Cron on GitHub Actions is best-effort and can be delayed under
+    # load, which is fine -- this is a daily snapshot, not a real-time monitor.
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+    inputs:
+      categories:
+        description: 'Comma-separated categories (blank = all)'
+        required: false
+        default: ''
+      accept_shrink:
+        description: 'Bypass the mass-deletion guard (only when a large drop is genuine)'
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  id-token: write   # required for the OIDC federated credential exchange
+  contents: write   # required to commit the snapshot back to the repo
+
+concurrency:
+  # Two overlapping runs would race on the same files and produce a corrupt commit.
+  group: entra-backup
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history so the diff against the previous run is available
+
+      - name: Verify configuration
+        shell: pwsh
+        run: |
+          if (-not '${{ vars.AZURE_TENANT_ID }}') { throw 'Repository variable AZURE_TENANT_ID is not set. See docs/SETUP.md.' }
+          if (-not '${{ vars.AZURE_CLIENT_ID }}') { throw 'Repository variable AZURE_CLIENT_ID is not set. See docs/SETUP.md.' }
+
+      - name: Run offline regression tests
+        shell: pwsh
+        # Cheap, and it catches a broken normaliser before it can write a snapshot whose
+        # diff is pure noise.
+        run: ./tests/Test-Offline.ps1
+
+      - name: Collect tenant snapshot
+        id: collect
+        shell: pwsh
+        env:
+          AZURE_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
+          AZURE_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
+        run: |
+          $backupArgs = @{ AuthMode = 'OIDC'; TenantId = $env:AZURE_TENANT_ID; ClientId = $env:AZURE_CLIENT_ID }
+
+          $categoryInput = '${{ github.event.inputs.categories }}'
+          if ($categoryInput) {
+            $backupArgs['Category'] = $categoryInput.Split(',') | ForEach-Object { $_.Trim() } | Where-Object { $_ }
+          }
+          if ('${{ github.event.inputs.accept_shrink }}' -eq 'true') {
+            $backupArgs['AcceptShrink'] = $true
+          }
+
+          ./scripts/Invoke-EntraBackup.ps1 @backupArgs
+
+          # Exit 2 is the mass-deletion guard, which is a deliberate refusal rather than a
+          # crash. It is surfaced distinctly so the failure is not mistaken for a bug.
+          if ($LASTEXITCODE -eq 2) {
+            "## Backup blocked by the safety guard`n`nA collection shrank more than the configured limit, which usually means the run was throttled or lost a permission rather than that objects were really deleted. **Nothing was committed.**`n`nIf the drop is genuine, re-run this workflow with ``accept_shrink`` enabled." |
+              Out-File $env:GITHUB_STEP_SUMMARY -Append -Encoding utf8
+            exit 2
+          }
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Stage snapshot
+        id: stage
+        shell: pwsh
+        run: |
+          git config user.name  'entra-backup[bot]'
+          git config user.email 'entra-backup[bot]@users.noreply.github.com'
+          git add -A backup/
+
+          $changed = git diff --cached --name-only
+          if (-not $changed) {
+            Write-Host 'Tenant unchanged since the previous run; nothing to commit.'
+            "has_changes=false" | Out-File $env:GITHUB_OUTPUT -Append -Encoding utf8
+          } else {
+            "has_changes=true" | Out-File $env:GITHUB_OUTPUT -Append -Encoding utf8
+          }
+
+      - name: Inspect for security-relevant changes
+        id: risk
+        if: steps.stage.outputs.has_changes == 'true'
+        shell: pwsh
+        run: ./scripts/Test-HighRiskChange.ps1 -Staged
+
+      - name: Commit snapshot
+        if: steps.stage.outputs.has_changes == 'true'
+        shell: pwsh
+        run: |
+          $stat = git diff --cached --shortstat
+          $counts = git diff --cached --name-status | ForEach-Object { $_.Substring(0,1) }
+          $added    = @($counts | Where-Object { $_ -eq 'A' }).Count
+          $modified = @($counts | Where-Object { $_ -eq 'M' }).Count
+          $deleted  = @($counts | Where-Object { $_ -eq 'D' }).Count
+
+          $date    = (Get-Date).ToUniversalTime().ToString('yyyy-MM-dd')
+          $subject = "backup: $date (+$added ~$modified -$deleted)"
+
+          $body = "Automated Entra tenant snapshot.`n`n$stat"
+          if ('${{ steps.risk.outputs.high_risk }}' -eq 'true') {
+            $body += "`n`nContains ${{ steps.risk.outputs.finding_count }} security-relevant change(s); see the linked issue."
+          }
+
+          git commit -m $subject -m $body
+          git push
+
+          "### $subject`n`n``````n$stat`n``````" | Out-File $env:GITHUB_STEP_SUMMARY -Append -Encoding utf8
+
+      - name: Raise an issue for security-relevant changes
+        if: steps.stage.outputs.has_changes == 'true' && steps.risk.outputs.high_risk == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: pwsh
+        run: |
+          $date  = (Get-Date).ToUniversalTime().ToString('yyyy-MM-dd')
+          $sha   = (git rev-parse --short HEAD).Trim()
+          $body  = Get-Content ./high-risk-report.md -Raw
+          $body += "`n`nCommit: ${{ github.server_url }}/${{ github.repository }}/commit/$sha"
+
+          gh issue create `
+            --title "Security-relevant Entra changes on $date" `
+            --body  $body `
+            --label 'entra-change' 2>&1 | Write-Host
+
+          # A missing label should not fail the run; the snapshot is already committed.
+          if ($LASTEXITCODE -ne 0) {
+            Write-Warning 'Could not create the issue with a label; retrying without one.'
+            gh issue create --title "Security-relevant Entra changes on $date" --body $body
+          }
+
+      - name: Report no-change runs
+        if: steps.stage.outputs.has_changes != 'true'
+        shell: pwsh
+        run: |
+          'No configuration drift detected since the previous run.' |
+            Out-File $env:GITHUB_STEP_SUMMARY -Append -Encoding utf8

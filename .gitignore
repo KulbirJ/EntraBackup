@@ -1,0 +1,12 @@
+# Never commit credentials. The production path uses OIDC federation and has no secret
+# to leak, but local experiments sometimes do.
+*.secret
+*.pfx
+*.pem
+.env
+local.settings.json
+
+scratch_*.json
+tests/output/
+*.log
+high-risk-report.md

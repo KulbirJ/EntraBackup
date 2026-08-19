@@ -1,0 +1,105 @@
+name: OIDC Probe
+
+# Run this ONCE during setup, before creating the federated credential.
+#
+# It prints the exact `sub` claim this repository presents to Entra. That value must be
+# copied verbatim into the federated identity credential -- do not construct it by hand.
+#
+# Since 15 July 2026 GitHub issues the *immutable* subject format for newly created,
+# renamed, or transferred repositories:
+#
+#     repo:<owner>@<owner_id>/<repo>@<repo_id>:ref:refs/heads/main
+#
+# rather than the older name-based `repo:<owner>/<repo>:ref:refs/heads/main`. A
+# credential built from the old format fails with AADSTS70021 and no useful detail, so
+# reading the real claim is the only reliable way to get this right.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  # Without id-token: write, GitHub does not populate the token request environment at
+  # all and the probe cannot run.
+  id-token: write
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show the OIDC claims this repo presents
+        shell: pwsh
+        run: |
+          Import-Module ./scripts/lib/Auth.psm1 -Force -DisableNameChecking
+
+          $token  = Get-GitHubOidcToken -Audience 'api://AzureADTokenExchange'
+          $claims = ConvertFrom-JwtPayload -Token $token
+
+          Write-Host ''
+          Write-Host '=== Federated credential values ===' -ForegroundColor Cyan
+          Write-Host "issuer   : $($claims.iss)"
+          Write-Host "audience : $($claims.aud)"
+          Write-Host "subject  : $($claims.sub)"
+          Write-Host ''
+          Write-Host 'Supporting claims (for a flexible credential):' -ForegroundColor Cyan
+          Write-Host "repository_id       : $($claims.repository_id)"
+          Write-Host "repository_owner_id : $($claims.repository_owner_id)"
+          Write-Host "repository          : $($claims.repository)"
+          Write-Host "ref                 : $($claims.ref)"
+
+          $isImmutable = $claims.sub -match '@\d+'
+          Write-Host ''
+          Write-Host "Subject format: $(if ($isImmutable) { 'IMMUTABLE (new style)' } else { 'name-based (legacy)' })" -ForegroundColor Yellow
+
+          # Written to the run summary so the value can be copied without scrolling logs.
+          $summary = @"
+          ## Federated credential values
+
+          Copy the subject below **verbatim** into the Entra federated identity credential.
+
+          | Field | Value |
+          |---|---|
+          | issuer | ``$($claims.iss)`` |
+          | subject | ``$($claims.sub)`` |
+          | audience | ``api://AzureADTokenExchange`` |
+          | repository_id | ``$($claims.repository_id)`` |
+          | repository_owner_id | ``$($claims.repository_owner_id)`` |
+
+          Subject format detected: **$(if ($isImmutable) { 'immutable' } else { 'name-based (legacy)' })**
+
+          ### Create it with
+
+          ``````bash
+          az ad app federated-credential create --id <APP_OBJECT_ID> --parameters '{
+            "name": "entra-backup-main",
+            "issuer": "$($claims.iss)",
+            "subject": "$($claims.sub)",
+            "audiences": ["api://AzureADTokenExchange"]
+          }'
+          ``````
+          "@
+          $summary -replace '(?m)^          ', '' | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append -Encoding utf8
+
+      - name: Verify the token exchange actually works
+        # Skipped until the repo variables exist, so the first run can just report claims.
+        if: vars.AZURE_TENANT_ID != '' && vars.AZURE_CLIENT_ID != ''
+        shell: pwsh
+        env:
+          AZURE_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
+          AZURE_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
+        run: |
+          Import-Module ./scripts/lib/Auth.psm1        -Force -DisableNameChecking
+          Import-Module ./scripts/lib/GraphClient.psm1 -Force -DisableNameChecking
+
+          $provider = Get-EntraTokenProvider -Mode OIDC `
+              -TenantId $env:AZURE_TENANT_ID -ClientId $env:AZURE_CLIENT_ID
+          Initialize-GraphClient -TokenProvider $provider
+
+          $org = Get-GraphCollection -Uri '/v1.0/organization'
+          if ($org.Count -eq 0) { throw 'Token acquired but /organization returned nothing.' }
+
+          Write-Host "Connected to: $($org[0].displayName) ($($org[0].id))" -ForegroundColor Green
+          "End-to-end OIDC federation verified against **$($org[0].displayName)**." |
+              Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append -Encoding utf8
