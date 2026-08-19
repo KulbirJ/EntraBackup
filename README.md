@@ -32,7 +32,9 @@ that would require.
 | **Restorable only within ~30 days** | Users, groups, app registrations — via `/directory/deletedItems`. The snapshot records what they *were*; the restore itself is a Graph call |
 | **Not recoverable at all** | Passwords, MFA and authentication-method registrations, application client secrets and certificates (write-only in Graph by design), B2B redemption state |
 
-See [docs/SCOPE.md](docs/SCOPE.md) for the endpoint-by-endpoint breakdown.
+See [docs/SCOPE.md](docs/SCOPE.md) for the endpoint-by-endpoint breakdown, and
+[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full design reference, component
+guide, and tenant-rebuild runbook.
 
 ## How it works
 
@@ -88,6 +90,15 @@ tests/Test-Offline.ps1    regression tests — no tenant or network needed
 Collections under `ShardThreshold` (default 2,000) are written one file per object.
 Larger ones switch to sharded newline-delimited JSON, because a directory holding tens
 of thousands of files makes git slow and the GitHub UI unusable.
+
+## Documentation
+
+| Document | Covers |
+|---|---|
+| [SETUP.md](docs/SETUP.md) | First-time configuration: app registration, OIDC federation, permissions |
+| [ARCHITECTURE.md](docs/ARCHITECTURE.md) | Design rationale, every component and script, how-to guide, full tenant-rebuild runbook |
+| [SCOPE.md](docs/SCOPE.md) | Endpoint-by-endpoint coverage and the limits of what Entra exposes |
+| [RESTORE.md](docs/RESTORE.md) | Restore cheat-sheet and history-querying recipes |
 
 ## Getting started
 
