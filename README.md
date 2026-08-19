@@ -1,137 +1,198 @@
 # Entra Tenant Backup
 
-Daily configuration snapshots of a Microsoft Entra ID tenant, committed to git so that
-history becomes the audit trail and the diff becomes the change-detection system.
+This tool takes a daily snapshot of how your Microsoft Entra ID tenant is configured and
+saves it to a private GitHub repository. Think of it as a photograph of your identity
+settings, taken every night and kept forever.
 
-> **This repository must stay private.** It contains complete user records — names,
-> email addresses, phone numbers, job titles, employee IDs, on-premises identifiers.
-> Git history is effectively permanent, so exposure of the repo is exposure of the
-> entire directory.
+If someone changes a security policy, deletes a group, or grants an application access to
+your data, you will be able to see exactly what changed, when, and what it looked like
+before.
 
-## Why
+---
 
-Entra keeps deleted objects for roughly 30 days and keeps no configuration history at
-all. There is no built-in way to answer:
+## The problem this solves
 
-- What did this Conditional Access policy look like last quarter?
-- Who was added to Global Administrator, and when?
-- Which app was granted that consent scope, and by whom?
-- What changed in the tenant last night?
+Microsoft keeps deleted users and groups for about 30 days. After that they are gone for
+good. Microsoft keeps no history of your *settings* at all.
 
-A daily snapshot in git answers all four.
+That leaves some ordinary questions impossible to answer:
 
-## What this is, and is not
+- What did this security policy look like three months ago?
+- Who was given administrator access last week?
+- Which application was allowed to read our mail, and when was that approved?
+- Something broke overnight. What changed?
 
-It is a **point-in-time configuration record, an audit trail, and a selective-recreate
-toolkit**. It is not one-click tenant restore, because Entra does not expose the data
-that would require.
+Today those questions have no answer. With a nightly snapshot in version control, all of
+them do.
 
-| | |
-|---|---|
-| **Recreatable from these files** | Conditional Access policies, named locations, groups and membership, app registrations, Intune configuration and compliance policies, administrative units, access packages, role assignments |
-| **Restorable only within ~30 days** | Users, groups, app registrations — via `/directory/deletedItems`. The snapshot records what they *were*; the restore itself is a Graph call |
-| **Not recoverable at all** | Passwords, MFA and authentication-method registrations, application client secrets and certificates (write-only in Graph by design), B2B redemption state |
+---
 
-See [docs/SCOPE.md](docs/SCOPE.md) for the endpoint-by-endpoint breakdown, and
-[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full design reference, component
-guide, and tenant-rebuild runbook.
+## What it does
 
-## How it works
+Every night at 3am UTC, an automated job signs in to your tenant, reads the configuration,
+and saves it as a set of text files. If anything has changed since the previous night, the
+change is recorded permanently with a date stamp.
 
-A scheduled GitHub Actions workflow authenticates to Graph using **workload identity
-federation** — GitHub mints a short-lived token proving which repository and branch is
-running, and Entra exchanges it for a Graph token. No client secret exists anywhere, so
-there is nothing to rotate and nothing to leak.
+It currently captures 549 items across 21 areas of your tenant, including:
 
-The collector walks [config/endpoints.psd1](config/endpoints.psd1), normalises every
-object, and writes deterministic JSON. Adding a backup target is an edit to that
-manifest, not a code change.
+- All users and their details
+- All groups, who is in them and who owns them
+- Administrator role assignments
+- Conditional Access policies (your sign-in security rules)
+- Registered applications and what they have been given access to
+- Licensing and domain configuration
 
-### Determinism is the whole game
+The whole run takes about 25 seconds.
 
-Collecting the data is easy. Making run N+1 produce *byte-identical* files when nothing
-changed is what decides whether this is useful or a wall of noise. So:
+When something security-sensitive changes, such as a sign-in policy being switched off or
+someone being made an administrator, the system opens a ticket so a person actually looks
+at it. Routine changes, like a new starter joining a group, are recorded quietly without
+raising an alarm.
 
-- object keys are sorted recursively;
-- self-churning fields are stripped (`onPremisesLastSyncDateTime` alone moves every
-  ~30 minutes on a synced tenant and would dirty every user file on every run);
-- unordered arrays are sorted by a stable key, while genuinely ordered ones are left
-  alone;
-- files are named by immutable GUID, so a rename is a one-line change in `_index.json`
-  rather than a delete plus an add;
-- JSON is serialised by [a hand-written writer](scripts/lib/Normalize.psm1) rather than
-  `ConvertTo-Json`, whose depth handling and non-ASCII escaping differ between
-  PowerShell 5.1 and 7 and would otherwise make the snapshot depend on which host ran it.
+---
 
-### The safety guard
+## What it cannot do
 
-The dangerous failure is not a crash — a crash commits nothing. It is the *partial
-success*: throttling or a revoked permission returns 20 users where there were 2,000,
-and the run commits a fictional mass deletion on top of real history.
+This matters more than the feature list, so it is worth being direct about it.
 
-So before anything is committed, object counts are compared against the previous run.
-Any collection that shrinks more than 20%, or empties out entirely, **aborts the run**.
-Growth is never blocked. A genuine bulk deletion is confirmed by re-running with
-`-AcceptShrink`.
+**This is not a restore button.** It is a detailed record of how things were set up, which
+makes rebuilding possible and much faster. It does not put the tenant back by itself.
 
-## Layout
+Three tiers, in plain terms:
 
-```
-config/endpoints.psd1     what gets backed up  (edit this to add targets)
-config/settings.psd1      thresholds and tunables
-scripts/lib/              Normalize · GraphClient · Collector · SafetyGuard · Auth
-scripts/Invoke-EntraBackup.ps1
-backup/                   the committed snapshot
-  _meta/run.json          tenant, timestamp, per-collection counts
-  directory/ policies/ applications/ governance/ intune/
-tests/Test-Offline.ps1    regression tests — no tenant or network needed
-```
+**Things we can rebuild from this record.** Security policies, groups and their membership,
+application registrations, device management policies. We have everything needed to
+recreate them.
 
-Collections under `ShardThreshold` (default 2,000) are written one file per object.
-Larger ones switch to sharded newline-delimited JSON, because a directory holding tens
-of thousands of files makes git slow and the GitHub UI unusable.
+**Things recoverable only within 30 days.** Deleted users, groups and applications. Inside
+that window Microsoft can restore them properly, keeping all their existing access. After
+30 days we can recreate the account, but it will be treated as a brand new person by every
+other system, so all its access must be granted again by hand.
+
+**Things nobody can back up.** Passwords, multi-factor authentication registrations, and
+application secrets. Microsoft never makes these readable to any tool, deliberately, for
+security reasons. After a disaster every user needs a new password and has to re-register
+their authentication app. No product on the market changes this.
+
+If a vendor claims to offer complete Entra restore, that third row is the part they are
+glossing over.
+
+---
+
+## Privacy: this repository must stay private
+
+The snapshot contains full staff records. Names, email addresses, phone numbers, job
+titles, departments, employee IDs.
+
+Two things follow from that:
+
+1. **The repository must never be made public.** Exposing it exposes the entire staff
+   directory.
+2. **The history cannot be quietly cleaned later.** Version control keeps everything.
+   Removing a field today does not remove it from last month's snapshot. That requires
+   rewriting the whole history.
+
+If there are fields we would rather not store at all, the time to decide is now, while the
+history is a day old. It is a small configuration change today and a painful one in a
+year. See [SCOPE.md](docs/SCOPE.md) for what is captured.
+
+Depending on where you operate, storing this may carry data protection obligations.
+
+---
+
+## What it costs
+
+Nothing, in practice.
+
+It runs on GitHub's free automation allowance and uses roughly 15 minutes of it per month
+against a much larger monthly quota. It reads from Microsoft Graph, which is included with
+your existing licences. It cannot change anything in the tenant, because the account it
+uses has read-only access and no write permissions of any kind.
+
+There is no server to maintain and no software to install.
+
+---
+
+## Is it working?
+
+Two ways to check, neither of which needs technical knowledge.
+
+**Look at the repository.** Every night's run appears as an entry with a message like
+`backup: 2026-08-19 (+3 ~12 -1)`. That reads as: 3 items added, 12 changed, 1 removed.
+A quiet night shows `(+0 ~1 -0)`, because one internal file always records the time the
+job ran.
+
+**Watch for failures.** If a run fails, GitHub emails the repository owner. Silence means
+it is working.
+
+The system is built to stop rather than record something wrong. If it can only read part
+of the tenant, because of a network problem or a permissions change, it refuses to save
+anything at all. A partial snapshot would look like a mass deletion and would corrupt the
+history, which is worse than missing one night.
+
+---
+
+## If you need to recover something
+
+Start with [RESTORE.md](docs/RESTORE.md). The short version:
+
+**Someone deleted recently, within 30 days.** Use the restore script. The account comes
+back intact with all its previous access. This is the good case and takes minutes.
+
+**A policy or group was changed or deleted.** The snapshot has the old version. It can be
+recreated from the record. Security policies are deliberately restored switched off, so
+they can be reviewed before being made live again.
+
+**A serious incident affecting the whole tenant.** This is a rebuild measured in days, not
+a button press. [ARCHITECTURE.md section 5](docs/ARCHITECTURE.md#5-recovering-from-a-disaster) has
+the step-by-step runbook, in the correct order, along with an honest account of what has
+to be redone by hand.
+
+---
+
+## How it stays trustworthy
+
+A backup that quietly stops working is worse than no backup, because you believe you are
+covered. Three things guard against that.
+
+**It refuses partial saves.** Described above. Better to skip a night than record a lie.
+
+**It checks itself before every run.** 22 automated checks run first. If the tool has been
+broken by a change, the run stops before it can write anything.
+
+**Repeat runs produce identical files.** When nothing has changed in the tenant, the
+snapshot is byte-for-byte identical to yesterday's. That property is what makes the change
+history meaningful. If snapshots drifted slightly every night, real changes would be lost
+in the noise and nobody would read them. We verified this against your live tenant: the
+second run changed two lines, both of them the timestamp recording when the job ran.
+
+---
 
 ## Documentation
 
-| Document | Covers |
-|---|---|
-| [SETUP.md](docs/SETUP.md) | First-time configuration: app registration, OIDC federation, permissions |
-| [ARCHITECTURE.md](docs/ARCHITECTURE.md) | Design rationale, every component and script, how-to guide, full tenant-rebuild runbook |
-| [SCOPE.md](docs/SCOPE.md) | Endpoint-by-endpoint coverage and the limits of what Entra exposes |
-| [RESTORE.md](docs/RESTORE.md) | Restore cheat-sheet and history-querying recipes |
+| Document | Who it is for | Covers |
+|---|---|---|
+| [ARCHITECTURE.md](docs/ARCHITECTURE.md) | Everyone, then maintainers | How it works in plain terms, then the full technical reference and the tenant rebuild runbook |
+| [SETUP.md](docs/SETUP.md) | Whoever sets it up | First-time configuration |
+| [SCOPE.md](docs/SCOPE.md) | Security and compliance | Exactly what is captured, and the limits of what Microsoft exposes |
+| [RESTORE.md](docs/RESTORE.md) | Whoever is recovering something | Recovery steps and how to search the history |
 
-## Getting started
+---
 
-Full instructions in **[docs/SETUP.md](docs/SETUP.md)**. In short:
+## Setup, in brief
 
-1. Register an Entra app, grant it read-only application permissions, admin-consent them.
-2. Run the **OIDC Probe** workflow once and copy the `sub` claim it prints.
-3. Create a federated credential on the app using that subject *verbatim*.
-4. Set the `AZURE_TENANT_ID` and `AZURE_CLIENT_ID` repository variables.
-5. Run **Entra Backup** manually to verify, then let the daily schedule take over.
+Already done for this tenant. Recorded here for reference, and for anyone setting it up
+elsewhere. Full detail in [SETUP.md](docs/SETUP.md).
 
-Step 2 is not optional ceremony. Since 15 July 2026 GitHub issues an *immutable* subject
-format for new repositories, and a credential built from the older name-based format
-fails with an unhelpful error.
+1. Register an application in Entra and give it read-only permissions.
+2. Run the **OIDC Probe** job once, which prints an identifier that must be copied exactly.
+3. Set up trust between GitHub and Entra using that identifier.
+4. Record the tenant and application IDs in the repository settings.
+5. Run the backup once by hand to confirm, then leave the nightly schedule to it.
 
-### Trying it locally first
+Step 2 is not a formality. GitHub changed the format of that identifier in July 2026, and
+guessing it produces an error message that does not explain what is wrong.
 
-```powershell
-.\scripts\Invoke-EntraBackup.ps1 -Category directory
-```
-
-Signs in interactively with device code, so the collector can be exercised against a
-real tenant before any of the CI setup exists. Runs on Windows PowerShell 5.1 as well as
-PowerShell 7.
-
-```powershell
-.\tests\Test-Offline.ps1     # regression tests, no tenant required
-```
-
-## Change alerting
-
-After each commit the workflow inspects the diff and raises a GitHub issue when a change
-touches Conditional Access, tenant authorization policy, authentication methods,
-directory role assignments, PIM eligibility, or OAuth consent grants — separating those
-from the routine churn of people joining and leaving. Configure the watched paths in
-`HighRiskPaths` in [config/settings.psd1](config/settings.psd1).
+The connection between GitHub and Entra uses no password or secret key. GitHub proves its
+identity cryptographically each time. Nothing needs to be rotated, and there is no
+credential that could be stolen from the repository.

@@ -2,7 +2,7 @@
 
 > This is the quick reference. For the **full tenant-rebuild runbook** -- dependency
 > ordering, ID remapping, and what must be accepted as lost -- see
-> [ARCHITECTURE.md § 8](ARCHITECTURE.md#8-restoring-a-tenant).
+> [ARCHITECTURE.md § 5](ARCHITECTURE.md#5-recovering-from-a-disaster).
 
 Restore is deliberately **not** automated and **not** part of the scheduled workflow.
 The backup identity holds read permissions only; every operation here runs locally under
