@@ -1,4 +1,4 @@
-# Entra Tenant Backup
+# Entra Tenant Backup ( Current Repo is public for demo tenant and demo purposes)
 
 This tool takes a daily snapshot of how your Microsoft Entra ID tenant is configured and
 saves it to a private GitHub repository. Think of it as a photograph of your identity
