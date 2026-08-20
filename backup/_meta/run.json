@@ -1,5 +1,5 @@
 {
-  "capturedAtUtc": "2026-08-19T19:52:26Z",
+  "capturedAtUtc": "2026-08-20T03:17:51Z",
   "categories": [
     "applications",
     "directory",
@@ -30,7 +30,7 @@
     "subscribedSkus": 2,
     "users": 4
   },
-  "durationSeconds": 26.2,
+  "durationSeconds": 29.1,
   "graphRequests": 136,
   "schemaVersion": 1,
   "skippedEndpoints": [
