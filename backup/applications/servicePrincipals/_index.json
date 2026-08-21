@@ -1,6 +1,6 @@
 {
   "collection": "servicePrincipals",
-  "count": 90,
+  "count": 91,
   "idField": "id",
   "items": {
     "0733cc84-daac-4090-b442-8c6a210df7a5": "OCaaS Worker Services",
@@ -18,6 +18,7 @@
     "36230529-f6a3-4ba0-8609-2b060bfdebe7": "Dunloe Dataplane Service",
     "362e73aa-7ebc-4e51-a453-7301a52fc4f4": "MS-PIM",
     "392b3974-cb21-41da-9e16-beaa1383ee97": "Microsoft 365 Security and Compliance Center",
+    "3977a46c-171f-4bee-9e5a-0a700ddc0d4b": "AAD App Management",
     "3c0790e6-70b1-426c-b19a-6b5190d281f1": "Office365 Shell SS-Server Default",
     "40111fb4-403f-4297-afad-9d1721fe2b86": "OneProfile Service",
     "441d60d3-430a-4ce4-a074-f9d97275b33a": "Bing",
