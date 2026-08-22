@@ -3,10 +3,10 @@
     "applications": {
       "applicationFilter": null,
       "excludeApplications": [],
-      "includeApplications": [],
-      "includeAuthenticationContextClassReferences": [
-        "c1"
+      "includeApplications": [
+        "All"
       ],
+      "includeAuthenticationContextClassReferences": [],
       "includeUserActions": []
     },
     "authenticationFlows": null,
@@ -40,23 +40,10 @@
       ],
       "includeGroups": [],
       "includeGuestsOrExternalUsers": null,
-      "includeRoles": [
-        "62e90394-69f5-4237-9190-012177145e10",
-        "194ae4cb-b126-40b2-bd5b-6091b380977d",
-        "f28a1f50-f6e7-4571-818b-6a12f2af6b6c",
-        "29232cdf-9323-42fd-ade2-1d097af3e4de",
-        "b1be1c3e-b65d-4f19-8427-f6fa0d97feb9",
-        "729827e3-9c14-49f7-bb1b-9608f156bbb8",
-        "b0f54661-2d74-4c50-afa3-1ec803f12efe",
-        "fe930be7-5e62-47db-91af-98c3a49a38b1",
-        "c4e39bd9-1100-46d3-8c65-fb160da0071f",
-        "9b895d92-2cd3-44c7-9d02-a6ac2d5ea5c3",
-        "158c047a-c907-4556-b7ef-446551a6b5f7",
-        "966707d0-3269-4727-9be2-8c3a10f19b9d",
-        "7be44c8a-adaf-4e2a-84d6-ab2649e08a13",
-        "e8611ab8-c189-46e8-94e1-60213ab1f814"
-      ],
-      "includeUsers": []
+      "includeRoles": [],
+      "includeUsers": [
+        "48646b61-a56f-4888-b209-b6dd3e8490f3"
+      ]
     }
   },
   "createdDateTime": "2026-08-19T03:49:22.4999309Z",
@@ -66,43 +53,27 @@
       "allowedCombinations": [
         "windowsHelloForBusiness",
         "fido2",
-        "x509CertificateMultiFactor",
-        "deviceBasedPush",
-        "temporaryAccessPassOneTime",
-        "temporaryAccessPassMultiUse",
-        "password,microsoftAuthenticatorPush",
-        "password,softwareOath",
-        "password,hardwareOath",
-        "password,sms",
-        "password,voice",
-        "federatedMultiFactor",
-        "microsoftAuthenticatorPush,federatedSingleFactor",
-        "softwareOath,federatedSingleFactor",
-        "hardwareOath,federatedSingleFactor",
-        "sms,federatedSingleFactor",
-        "voice,federatedSingleFactor"
+        "x509CertificateMultiFactor"
       ],
       "combinationConfigurations": [],
       "combinationConfigurations@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies('a6ea20c6-fc98-434e-bd45-26374c4dc9dc')/grantControls/authenticationStrength/combinationConfigurations",
       "createdDateTime": "2021-12-01T08:00:00.0000000Z",
-      "description": "Combinations of methods that satisfy strong authentication, such as a password + SMS",
-      "displayName": "Multifactor authentication",
-      "id": "00000000-0000-0000-0000-000000000002",
+      "description": "Phishing-resistant, Passwordless methods for the strongest authentication, such as a FIDO2 security key",
+      "displayName": "Phishing-resistant MFA",
+      "id": "00000000-0000-0000-0000-000000000004",
       "modifiedDateTime": "2021-12-01T08:00:00.0000000Z",
       "policyType": "builtIn",
       "requirementsSatisfied": "mfa"
     },
     "authenticationStrength@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies('a6ea20c6-fc98-434e-bd45-26374c4dc9dc')/grantControls/authenticationStrength/$entity",
-    "builtInControls": [
-      "compliantDevice"
-    ],
+    "builtInControls": [],
     "customAuthenticationFactors": [],
     "operator": "OR",
     "termsOfUse": []
   },
   "id": "a6ea20c6-fc98-434e-bd45-26374c4dc9dc",
-  "modifiedDateTime": "2026-08-19T14:34:19.4067558Z",
+  "modifiedDateTime": "2026-08-21T16:21:42.4266718Z",
   "sessionControls": null,
-  "state": "enabledForReportingButNotEnforced",
+  "state": "disabled",
   "templateId": "c7503427-338e-4c5e-902d-abe252abfb43"
 }

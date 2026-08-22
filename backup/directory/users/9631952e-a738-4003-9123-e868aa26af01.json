@@ -13,67 +13,65 @@
   ],
   "assignedPlans": [
     {
-      "assignedDateTime": "2026-08-18T22:08:12.0000000Z",
+      "assignedDateTime": "2026-08-21T22:50:57.0000000Z",
       "capabilityStatus": "Enabled",
       "service": "AADPremiumService",
       "servicePlanId": "41781fb2-bc02-4b7c-bd55-b576c07bb09d"
     },
     {
-      "assignedDateTime": "2026-08-18T22:08:12.0000000Z",
+      "assignedDateTime": "2026-08-21T22:50:57.0000000Z",
       "capabilityStatus": "Enabled",
       "service": "MultiFactorService",
       "servicePlanId": "8a256a2b-b617-496d-b51b-e76466e88db0"
     },
     {
-      "assignedDateTime": "2026-08-18T22:08:12.0000000Z",
+      "assignedDateTime": "2026-08-21T22:50:57.0000000Z",
       "capabilityStatus": "Enabled",
       "service": "Adallom",
       "servicePlanId": "932ad362-64a8-4783-9106-97849a1a30b9"
     },
     {
-      "assignedDateTime": "2026-08-21T16:31:06.0000000Z",
+      "assignedDateTime": "2026-08-21T22:50:57.0000000Z",
       "capabilityStatus": "Enabled",
       "service": "AADPremiumService",
       "servicePlanId": "e866a266-3cff-43a3-acca-0c90a7e00c8b"
     },
     {
-      "assignedDateTime": "2026-08-18T22:08:12.0000000Z",
+      "assignedDateTime": "2026-08-21T22:50:57.0000000Z",
       "capabilityStatus": "Enabled",
       "service": "AADPremiumService",
       "servicePlanId": "eec0eb4f-6444-4f95-aba0-50c24d67f998"
     }
   ],
-  "businessPhones": [
-    "3069992658"
-  ],
-  "city": "Regina",
+  "businessPhones": [],
+  "city": null,
   "companyName": null,
   "consentProvidedForMinor": null,
   "country": null,
-  "createdDateTime": "2026-08-18T22:05:39.0000000Z",
+  "createdDateTime": "2026-08-21T22:47:44.0000000Z",
   "creationType": null,
   "department": null,
-  "displayName": "Kulbir Jaglan",
+  "displayName": "LAB Approver 1",
   "employeeHireDate": null,
   "employeeId": null,
   "employeeType": null,
   "externalUserState": null,
   "faxNumber": null,
-  "givenName": "Kulbir",
-  "id": "399b2b9a-ac4d-4ca5-83d0-3a67077d45ca",
+  "givenName": null,
+  "id": "9631952e-a738-4003-9123-e868aa26af01",
   "identities": [
     {
       "issuer": "azsol642.onmicrosoft.com",
-      "issuerAssignedId": "KulbirJaglan@azsol642.onmicrosoft.com",
+      "issuerAssignedId": "lab.approver1@azsol642.onmicrosoft.com",
       "signInType": "userPrincipalName"
     }
   ],
   "imAddresses": [],
   "jobTitle": null,
-  "lastPasswordChangeDateTime": "2026-08-18T22:05:39.0000000Z",
+  "lastPasswordChangeDateTime": "2026-08-21T22:47:44.0000000Z",
   "legalAgeGroupClassification": null,
   "mail": null,
-  "mailNickname": "KulbirJaglan",
+  "mailNickname": "lab.approver1",
   "mobilePhone": null,
   "officeLocation": null,
   "onPremisesDistinguishedName": null,
@@ -83,19 +81,17 @@
   "onPremisesSecurityIdentifier": null,
   "onPremisesSyncEnabled": null,
   "onPremisesUserPrincipalName": null,
-  "otherMails": [
-    "jaglan.kulvir@gmail.com"
-  ],
+  "otherMails": [],
   "passwordPolicies": null,
-  "postalCode": "s4x 0n8",
-  "preferredLanguage": "en",
+  "postalCode": null,
+  "preferredLanguage": null,
   "proxyAddresses": [],
-  "securityIdentifier": "S-1-12-1-966470554-1285925965-1731907715-3393551623",
+  "securityIdentifier": "S-1-12-1-2519831854-1073981240-1760043921-28255914",
   "showInAddressList": null,
-  "state": "sk",
-  "streetAddress": "2460 Saunders Cres",
-  "surname": "Jaglan",
+  "state": null,
+  "streetAddress": null,
+  "surname": null,
   "usageLocation": "CA",
-  "userPrincipalName": "KulbirJaglan@azsol642.onmicrosoft.com",
+  "userPrincipalName": "lab.approver1@azsol642.onmicrosoft.com",
   "userType": "Member"
 }

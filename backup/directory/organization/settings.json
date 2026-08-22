@@ -13,6 +13,12 @@
       "servicePlanId": "41781fb2-bc02-4b7c-bd55-b576c07bb09d"
     },
     {
+      "assignedDateTime": "2026-08-21T16:34:32.0000000Z",
+      "capabilityStatus": "Enabled",
+      "service": "AADPremiumService",
+      "servicePlanId": "7dc0e92d-bf15-401d-907e-0884efe7c760"
+    },
+    {
       "assignedDateTime": "2026-08-18T22:07:43.0000000Z",
       "capabilityStatus": "Enabled",
       "service": "MultiFactorService",
@@ -47,7 +53,7 @@
   "defaultUsageLocation": null,
   "directorySizeQuota": {
     "total": 50000,
-    "used": 120
+    "used": 174
   },
   "displayName": "azsol",
   "id": "19a113ce-a488-46f1-aedc-757a591bad61",

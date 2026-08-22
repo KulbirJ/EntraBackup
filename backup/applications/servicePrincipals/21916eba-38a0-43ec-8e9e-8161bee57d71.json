@@ -1,0 +1,68 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Compute Recommendation Service",
+  "appId": "b9a92e36-2cf8-4f4e-bcb3-9d99e00e14ab",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "This allows applications to call CRS APIs.",
+      "displayName": "Call all CRS APIs",
+      "id": "f155dcbc-e393-438b-b343-92699349582d",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "Crs.Api.All"
+    }
+  ],
+  "createdByAppId": "797f4846-ba00-4fd7-ba43-dac1f8f63013",
+  "createdDateTime": "2026-08-21T16:43:34.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Compute Recommendation Service",
+  "homepage": null,
+  "id": "21916eba-38a0-43ec-8e9e-8161bee57d71",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "api://b9a92e36-2cf8-4f4e-bcb3-9d99e00e14ab",
+    "b9a92e36-2cf8-4f4e-bcb3-9d99e00e14ab"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [
+    "disableLegacyUserImpersonationClient",
+    "disableLegacyUserImpersonationResource"
+  ],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": "2024-04-10T16:53:53.0000000Z",
+    "displayName": "Microsoft Corporation",
+    "verifiedPublisherId": "5206095"
+  }
+}

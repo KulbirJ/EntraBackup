@@ -1,9 +1,12 @@
 {
   "collection": "groups",
-  "count": 2,
+  "count": 5,
   "idField": "id",
   "items": {
+    "016252aa-0424-4e56-ade4-00a20b625ed6": "LAB-GRP-PIM-Approvers",
     "0847a506-6432-478d-924e-f86a8d7b9939": "Group1",
+    "a52f1138-3140-4f1d-96e2-648e6ce5d404": "LAB-GRP-RoleAssignable",
+    "d3b6c26e-7718-4f48-8b0d-e91d06669603": "GA",
     "ee57c5a7-50fe-4d17-9783-772a525baeca": "Group2"
   },
   "layout": "per-object"

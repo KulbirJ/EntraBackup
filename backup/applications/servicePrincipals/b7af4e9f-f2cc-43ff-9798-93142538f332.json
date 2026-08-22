@@ -1,0 +1,89 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Application Insights API",
+  "appId": "f5c26e74-f226-4ae8-85f0-b4af0080ac9e",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allow this application to access Application Insights data",
+      "displayName": "Read Application Insights Data",
+      "id": "3c63f9fe-1706-42a7-9f53-25b47753d668",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "Data.Read"
+    }
+  ],
+  "createdByAppId": "797f4846-ba00-4fd7-ba43-dac1f8f63013",
+  "createdDateTime": "2026-08-21T16:44:27.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Application Insights API",
+  "homepage": null,
+  "id": "b7af4e9f-f2cc-43ff-9798-93142538f332",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [
+    {
+      "adminConsentDescription": "Allow this application to access Application Insights data on behalf of the user",
+      "adminConsentDisplayName": "Read Application Insights Data as user",
+      "id": "c6d30a22-009b-43ce-a9e9-3ca625e7a3d4",
+      "isEnabled": true,
+      "type": "User",
+      "userConsentDescription": "Allow this application to access your Application Insights data",
+      "userConsentDisplayName": "Read Application Insights Data",
+      "value": "Data.Read"
+    }
+  ],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "f5c26e74-f226-4ae8-85f0-b4af0080ac9e",
+    "https://api.aimon.applicationinsights.io",
+    "https://api.aimon.applicationinsights.io/",
+    "https://api.applicationinsights.io",
+    "https://api.applicationinsights.io/",
+    "https://api1.aimon.applicationinsights.io",
+    "https://api1.applicationinsights.io",
+    "https://api2.aimon.applicationinsights.io",
+    "https://api2.applicationinsights.io",
+    "https://api3.aimon.applicationinsights.io",
+    "https://api3.applicationinsights.io",
+    "https://api4.aimon.applicationinsights.io",
+    "https://api4.applicationinsights.io",
+    "https://api5.aimon.applicationinsights.io",
+    "https://api5.applicationinsights.io"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": "2024-06-27T12:44:47.0000000Z",
+    "displayName": "Microsoft Corporation",
+    "verifiedPublisherId": "5206095"
+  }
+}

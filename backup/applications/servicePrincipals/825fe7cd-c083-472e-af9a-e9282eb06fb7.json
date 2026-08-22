@@ -1,0 +1,55 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "LAB-APP-GraphReader",
+  "appId": "5ef66adf-1b54-4a55-9cb6-81f5c67e2f58",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "19a113ce-a488-46f1-aedc-757a591bad61",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [],
+  "createdByAppId": "18ed3507-a475-4ccb-b669-d66bc9f2a36e",
+  "createdDateTime": "2026-08-21T23:08:51.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "LAB-APP-GraphReader",
+  "homepage": null,
+  "id": "825fe7cd-c083-472e-af9a-e9282eb06fb7",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "5ef66adf-1b54-4a55-9cb6-81f5c67e2f58"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMyOrg",
+  "tags": [
+    "HideApp",
+    "WindowsAzureActiveDirectoryIntegratedApp"
+  ],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

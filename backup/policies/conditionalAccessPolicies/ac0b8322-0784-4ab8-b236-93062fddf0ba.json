@@ -1,0 +1,57 @@
+{
+  "conditions": {
+    "applications": {
+      "applicationFilter": null,
+      "excludeApplications": [],
+      "includeApplications": [
+        "None"
+      ],
+      "includeAuthenticationContextClassReferences": [],
+      "includeUserActions": []
+    },
+    "authenticationFlows": null,
+    "clientApplications": null,
+    "clientAppTypes": [
+      "all"
+    ],
+    "devices": null,
+    "insiderRiskLevels": null,
+    "locations": null,
+    "platforms": null,
+    "servicePrincipalRiskLevels": [],
+    "signInRiskLevels": [],
+    "userRiskLevels": [],
+    "users": {
+      "excludeGroups": [],
+      "excludeGuestsOrExternalUsers": null,
+      "excludeRoles": [],
+      "excludeUsers": [
+        "5245bbcd-4f25-4dab-915a-7ad5c20c581d",
+        "48646b61-a56f-4888-b209-b6dd3e8490f3"
+      ],
+      "includeGroups": [],
+      "includeGuestsOrExternalUsers": null,
+      "includeRoles": [],
+      "includeUsers": [
+        "All"
+      ]
+    }
+  },
+  "createdDateTime": "2026-08-21T22:55:09.8363086Z",
+  "displayName": "LAB-CA-001-Require-MFA-All-Users",
+  "grantControls": {
+    "authenticationStrength": null,
+    "authenticationStrength@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/conditionalAccess/policies('ac0b8322-0784-4ab8-b236-93062fddf0ba')/grantControls/authenticationStrength/$entity",
+    "builtInControls": [
+      "mfa"
+    ],
+    "customAuthenticationFactors": [],
+    "operator": "OR",
+    "termsOfUse": []
+  },
+  "id": "ac0b8322-0784-4ab8-b236-93062fddf0ba",
+  "modifiedDateTime": null,
+  "sessionControls": null,
+  "state": "enabledForReportingButNotEnforced",
+  "templateId": null
+}

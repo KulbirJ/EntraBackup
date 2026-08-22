@@ -1,0 +1,88 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Diagnostic Services Data Access",
+  "appId": "3603eff4-9141-41d5-ba8f-02fb3a439cd6",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [],
+  "createdByAppId": "797f4846-ba00-4fd7-ba43-dac1f8f63013",
+  "createdDateTime": "2026-08-21T16:44:28.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Diagnostic Services Data Access",
+  "homepage": null,
+  "id": "6a2d8f72-edcf-41be-97bb-00a4cf9808ea",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [
+    {
+      "adminConsentDescription": "Allow the application to access Diagnostic Services on behalf of the signed-in user",
+      "adminConsentDisplayName": "Access Diagnostic Services",
+      "id": "384a9d29-7ed2-4fc4-b781-1aa48cb2b883",
+      "isEnabled": false,
+      "type": "User",
+      "userConsentDescription": "Allow the application to access Diagnostic Services on your behalf",
+      "userConsentDisplayName": "Access Diagnostic Services",
+      "value": "user_impersonation"
+    },
+    {
+      "adminConsentDescription": "Allow the application to read profiler traces, insights, and diagnostic data on behalf of the signed-in user",
+      "adminConsentDisplayName": "Read Diagnostic Services data",
+      "id": "ada81ce7-1959-4df2-81a5-cd710022e0c5",
+      "isEnabled": true,
+      "type": "User",
+      "userConsentDescription": "Allow the application to read your profiler traces, insights, and diagnostic data",
+      "userConsentDisplayName": "Read your Diagnostic Services data",
+      "value": "DataAccess.Read"
+    },
+    {
+      "adminConsentDescription": "Allow the application to read and modify profiler settings, trigger profiling sessions, upload symbols, and manage diagnostic data on behalf of the signed-in user",
+      "adminConsentDisplayName": "Read and write Diagnostic Services data",
+      "id": "ce194c4c-ad00-4826-8328-102bb21ec298",
+      "isEnabled": true,
+      "type": "Admin",
+      "userConsentDescription": "Allow the application to read and modify your profiler settings and diagnostic data",
+      "userConsentDisplayName": "Read and modify your Diagnostic Services data",
+      "value": "DataAccess.ReadWrite"
+    }
+  ],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "3603eff4-9141-41d5-ba8f-02fb3a439cd6",
+    "api://dataplane.diagnosticservices.azure.com"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [
+    "disableLegacyUserImpersonationClient",
+    "disableLegacyUserImpersonationResource",
+    "GitCreatedApp"
+  ],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": "2026-08-10T19:12:41.0000000Z",
+    "displayName": "Microsoft Corporation",
+    "verifiedPublisherId": "5206095"
+  }
+}

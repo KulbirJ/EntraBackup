@@ -1,9 +1,10 @@
 {
   "collection": "conditionalAccessPolicies",
-  "count": 1,
+  "count": 2,
   "idField": "id",
   "items": {
-    "a6ea20c6-fc98-434e-bd45-26374c4dc9dc": "Require multifactor authentication for admins"
+    "a6ea20c6-fc98-434e-bd45-26374c4dc9dc": "Require multifactor authentication for admins",
+    "ac0b8322-0784-4ab8-b236-93062fddf0ba": "LAB-CA-001-Require-MFA-All-Users"
   },
   "layout": "per-object"
 }

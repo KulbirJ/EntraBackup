@@ -1,0 +1,68 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Microsoft.Azure.SyncFabric",
+  "appId": "00000014-0000-0000-c000-000000000000",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-21T19:39:37.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Microsoft.Azure.SyncFabric",
+  "homepage": null,
+  "id": "1c97f38c-13ea-4778-a375-fd630401909f",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [
+    {
+      "adminConsentDescription": "To allow application to send notifications to Azure AD provisioning service",
+      "adminConsentDisplayName": "Notifications.Write",
+      "id": "0d7005c0-855a-485a-9d5b-5676f80a4a04",
+      "isEnabled": true,
+      "type": "User",
+      "userConsentDescription": "To allow application to send notifications to Azure AD provisioning service",
+      "userConsentDisplayName": " Send notifications to Azure AD provisioning service",
+      "value": "Notifications.Write"
+    }
+  ],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "00000014-0000-0000-c000-000000000000",
+    "00000014-0000-0000-c000-000000000000/SyncFabric-int.windowsazure.net",
+    "00000014-0000-0000-c000-000000000000/SyncFabric-ppe.windowsazure.net",
+    "00000014-0000-0000-c000-000000000000/SyncFabric.windowsazure.net",
+    "https://syncfabric.windowsazure.com",
+    "https://syncfabric.windowsazure.us"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

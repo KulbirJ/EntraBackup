@@ -3,6 +3,9 @@
   "description": "Security defaults is a set of basic identity security mechanisms recommended by Microsoft. When enabled, these recommendations will be automatically enforced in your organization. Administrators and users will be better protected from common identity related attacks.",
   "displayName": "Security Defaults",
   "id": "00000000-0000-0000-0000-000000000005",
-  "isEnabled": true,
-  "securityDefaultsUpsell": null
+  "isEnabled": false,
+  "securityDefaultsUpsell": {
+    "action": "none",
+    "dueDateTime": "2026-08-21T16:04:36.2782349Z"
+  }
 }

@@ -1,10 +1,11 @@
 {
   "collection": "directoryRoles",
-  "count": 7,
+  "count": 8,
   "idField": "id",
   "items": {
     "13e7044c-8514-4d4a-a151-a018b0113245": "Billing Administrator",
     "284e194a-7984-4ae9-ac58-5f6e747326e3": "Global Reader",
+    "2b67bcb5-4cb4-4db1-9457-deba47095d18": "Azure AD Joined Device Local Administrator",
     "386816a7-641a-4850-ac7e-0f231b75f2ff": "Directory Readers",
     "65e08240-bc45-444c-bf8d-af76dcbc828e": "AI Reader",
     "66396f33-72a8-45b8-87e7-b47ddcd0d26e": "Application Administrator",

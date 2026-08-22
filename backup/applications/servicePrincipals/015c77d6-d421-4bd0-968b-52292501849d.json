@@ -1,0 +1,79 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Microsoft Graph Command Line Tools",
+  "appId": "14d82eec-204b-4c2f-b7e8-296a70dab67e",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "cdc5aeea-15c5-4db6-b079-fcadd2505dc2",
+  "appRoleAssignedTo": [
+    {
+      "appRoleId": "00000000-0000-0000-0000-000000000000",
+      "createdDateTime": "2026-08-21T23:00:15.6028324Z",
+      "id": "miubOU2spUyD0DpnB31Fyiv8yzjwpMZHoiK0yyGv8bo",
+      "principalDisplayName": "Kulbir Jaglan",
+      "principalId": "399b2b9a-ac4d-4ca5-83d0-3a67077d45ca",
+      "principalType": "User",
+      "resourceDisplayName": "Microsoft Graph Command Line Tools",
+      "resourceId": "015c77d6-d421-4bd0-968b-52292501849d"
+    },
+    {
+      "appRoleId": "00000000-0000-0000-0000-000000000000",
+      "createdDateTime": "2026-08-21T18:09:57.3150042Z",
+      "id": "zbtFUiVPq02RWnrVwgxYHfIMz1ztYopPqkCOYiEhOZE",
+      "principalDisplayName": "User888",
+      "principalId": "5245bbcd-4f25-4dab-915a-7ad5c20c581d",
+      "principalType": "User",
+      "resourceDisplayName": "Microsoft Graph Command Line Tools",
+      "resourceId": "015c77d6-d421-4bd0-968b-52292501849d"
+    }
+  ],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [],
+  "createdByAppId": null,
+  "createdDateTime": "2026-08-21T18:09:57.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Microsoft Graph Command Line Tools",
+  "homepage": "https://docs.microsoft.com/en-us/graph/powershell/get-started",
+  "id": "015c77d6-d421-4bd0-968b-52292501849d",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": "https://privacy.microsoft.com/en-us/privacystatement",
+    "supportUrl": null,
+    "termsOfServiceUrl": "https://docs.microsoft.com/en-us/legal/microsoft-apis/terms-of-use?context=graph/context"
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [
+    "ms-appx-web://microsoft.aad.brokerplugin/14d82eec-204b-4c2f-b7e8-296a70dab67e",
+    "http://localhost",
+    "https://login.microsoftonline.com/common/oauth2/nativeclient"
+  ],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "14d82eec-204b-4c2f-b7e8-296a70dab67e"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADandPersonalMicrosoftAccount",
+  "tags": [
+    "WindowsAzureActiveDirectoryIntegratedApp"
+  ],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": "2024-05-13T21:14:05.0000000Z",
+    "displayName": "Microsoft Corporation",
+    "verifiedPublisherId": "5206095"
+  }
+}

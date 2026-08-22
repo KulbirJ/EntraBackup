@@ -1,0 +1,231 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Billing RP",
+  "appId": "80dbdb39-4f33-4799-8b6f-711b5e3e61b6",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Rem Policy Manager",
+      "displayName": "RemPolicyManager",
+      "id": "03830c81-7471-499e-a514-e86f71829003",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "RemPolicyManager"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "FullTrust EA Partner Organizations Reader",
+      "displayName": "FullTrustEAPartnerOrganizationsReader",
+      "id": "1224c7b4-5fd0-40e8-a122-2fb278e6d012",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "FullTrustEAPartnerOrganizationsReader"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Address Customer Master Reader",
+      "displayName": "AddressCustomerMasterReader",
+      "id": "1cbc9fa5-af3f-44ad-9455-35ef4dd212aa",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "AddressCustomerMasterReader"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Customer Offboarding Manager",
+      "displayName": "CustomerOffboardingManager",
+      "id": "3c3a3b03-4791-4e89-8753-fa338df5564d",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "CustomerOffboardingManager"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Full Trust Internal Billing Account Reader",
+      "displayName": "FullTrustInternalBillingAccountReader",
+      "id": "42f62651-2fce-49b0-8b8a-b2c36bdb2c28",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "FullTrustInternalBillingAccountReader"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Full Trust Billing Subscription Refund Manager",
+      "displayName": "FullTrustBillingSubscriptionRefundManager",
+      "id": "501b1467-43a9-475e-9fbb-5e840ff5b597",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "FullTrustBillingSubscriptionRefundManager"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Partner Offboarding Manager",
+      "displayName": "PartnerOffboardingManager",
+      "id": "54bff1ce-0f2d-4eb3-a2f0-49d67447a80e",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "PartnerOffboardingManager"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Partner Details Manager",
+      "displayName": "PartnerDetailsManager",
+      "id": "66b0d3be-66cc-465d-852a-87d76566ce29",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "PartnerDetailsManager"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Refresh Manager",
+      "displayName": "RefreshManager",
+      "id": "73ba0d8a-0f84-44f8-9857-fb364934f4db",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "RefreshManager"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Project Reader",
+      "displayName": "ProjectReader",
+      "id": "88c2cc2d-c66c-4343-83ae-31fd6fd413b6",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "ProjectReader"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Billing Period Reader",
+      "displayName": "BillingPeriodReader",
+      "id": "8e62a787-fdef-400f-86a5-c8ba447b1e3a",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "BillingPeriodReader"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Subscription Migrator",
+      "displayName": "SubscriptionMigrator",
+      "id": "9edf2859-df6b-4ef5-ab1b-fd2837e2f7f7",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "SubscriptionMigrator"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Full Trust Project Reader",
+      "displayName": "FullTrustProjectReader",
+      "id": "a010eb98-c8e4-40c5-afc7-87df9f063e89",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "FullTrustProjectReader"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Customer Reader",
+      "displayName": "CustomerReader",
+      "id": "a589c920-4000-431e-8a26-3c849e60d9e8",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "CustomerReader"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Manger of legacy APIs",
+      "displayName": "LegacyManager",
+      "id": "b0096bea-94b4-42b2-990c-6eedd19f4f4a",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "LegacyManager"
+    },
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Indirect Reseller Offboarding Manager",
+      "displayName": "IndirectResellerOffboardingManager",
+      "id": "ddbd0f71-1ff8-4335-a4b5-420bab16e11e",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "IndirectResellerOffboardingManager"
+    }
+  ],
+  "createdByAppId": "797f4846-ba00-4fd7-ba43-dac1f8f63013",
+  "createdDateTime": "2026-08-21T14:39:08.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Billing RP",
+  "homepage": null,
+  "id": "8dc350ff-4599-46a7-a9b5-4d00e86c7b37",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "80dbdb39-4f33-4799-8b6f-711b5e3e61b6",
+    "https://billingrp.azure.net",
+    "https://billingrp.azure.net/"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": null,
+    "displayName": null,
+    "verifiedPublisherId": null
+  }
+}

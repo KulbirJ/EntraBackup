@@ -1,8 +1,9 @@
 {
   "collection": "applications",
-  "count": 1,
+  "count": 2,
   "idField": "id",
   "items": {
+    "2db5a54e-6a47-4c79-8771-18373f76fb48": "LAB-APP-GraphReader",
     "e2807f10-a78a-464b-83df-cc6c09b4c24f": "entra-backup-ci"
   },
   "layout": "per-object"

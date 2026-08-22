@@ -1,0 +1,89 @@
+{
+  "accountEnabled": true,
+  "addIns": [],
+  "alternativeNames": [],
+  "appDescription": null,
+  "appDisplayName": "Log Analytics API",
+  "appId": "ca7f3f0b-7d91-482c-8e09-c5d840d0eac5",
+  "applicationTemplateId": null,
+  "appOwnerOrganizationId": "f8cdef31-a31e-4b4a-93e4-5f571e91255a",
+  "appRoleAssignedTo": [],
+  "appRoleAssignmentRequired": false,
+  "appRoles": [
+    {
+      "allowedMemberTypes": [
+        "Application"
+      ],
+      "description": "Allow this application to access Log Analytics data on",
+      "displayName": "Read Log Analytics data",
+      "id": "e8f6e161-84d0-4cd7-9441-2d46ec9ec3d5",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "Data.Read"
+    }
+  ],
+  "createdByAppId": "797f4846-ba00-4fd7-ba43-dac1f8f63013",
+  "createdDateTime": "2026-08-21T16:44:09.0000000Z",
+  "description": null,
+  "disabledByMicrosoftStatus": null,
+  "displayName": "Log Analytics API",
+  "homepage": null,
+  "id": "5d57a882-ff71-4f3d-89f9-155c55e3fdb3",
+  "info": {
+    "logoUrl": null,
+    "marketingUrl": null,
+    "privacyStatementUrl": null,
+    "supportUrl": null,
+    "termsOfServiceUrl": null
+  },
+  "isDisabled": null,
+  "keyCredentials": [],
+  "loginUrl": null,
+  "logoutUrl": null,
+  "notes": null,
+  "notificationEmailAddresses": [],
+  "oauth2PermissionScopes": [
+    {
+      "adminConsentDescription": "Allow this application to access Log Analytics data on behalf of the user",
+      "adminConsentDisplayName": "Read Log Analytics data as user",
+      "id": "e8dac03d-d467-4a7e-9293-9cca7df08b31",
+      "isEnabled": true,
+      "type": "User",
+      "userConsentDescription": "Allow this application to access your Log Analytics Data",
+      "userConsentDisplayName": "Read Log Analytics Data",
+      "value": "Data.Read"
+    }
+  ],
+  "passwordCredentials": [],
+  "preferredSingleSignOnMode": null,
+  "preferredTokenSigningKeyThumbprint": null,
+  "replyUrls": [],
+  "resourceSpecificApplicationPermissions": [],
+  "samlSingleSignOnSettings": null,
+  "servicePrincipalNames": [
+    "ca7f3f0b-7d91-482c-8e09-c5d840d0eac5",
+    "https://api.loganalytics.io",
+    "https://api.loganalytics.io/",
+    "https://australiasoutheast.api.loganalytics.io",
+    "https://australiasoutheast.api.loganalytics.io/",
+    "https://eastus.api.loganalytics.io",
+    "https://eastus.api.loganalytics.io/",
+    "https://southeastasia.api.loganalytics.io",
+    "https://southeastasia.api.loganalytics.io/",
+    "https://westcentralus.api.loganalytics.io",
+    "https://westcentralus.api.loganalytics.io/",
+    "https://westeurope.api.loganalytics.io",
+    "https://westeurope.api.loganalytics.io/",
+    "https://westus2.api.loganalytics.io",
+    "https://westus2.api.loganalytics.io/"
+  ],
+  "servicePrincipalType": "Application",
+  "signInAudience": "AzureADMultipleOrgs",
+  "tags": [],
+  "tokenEncryptionKeyId": null,
+  "verifiedPublisher": {
+    "addedDateTime": "2026-08-02T06:53:23.0000000Z",
+    "displayName": "Microsoft Corporation",
+    "verifiedPublisherId": "5206095"
+  }
+}

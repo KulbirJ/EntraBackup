@@ -1,0 +1,42 @@
+{
+  "classification": null,
+  "createdDateTime": "2026-08-21T22:52:23.0000000Z",
+  "description": null,
+  "displayName": "LAB-GRP-PIM-Approvers",
+  "expirationDateTime": null,
+  "groupTypes": [],
+  "id": "016252aa-0424-4e56-ade4-00a20b625ed6",
+  "isAssignableToRole": null,
+  "isManagementRestricted": null,
+  "mail": null,
+  "mailEnabled": false,
+  "mailNickname": "d48f1dc1-7",
+  "members": [
+    {
+      "@odata.type": "#microsoft.graph.user",
+      "displayName": "LAB Approver 1",
+      "id": "9631952e-a738-4003-9123-e868aa26af01",
+      "userPrincipalName": "lab.approver1@azsol642.onmicrosoft.com"
+    },
+    {
+      "@odata.type": "#microsoft.graph.user",
+      "displayName": "LAB Approver 2",
+      "id": "e01b5977-6069-4acb-b297-a65952ae1e87",
+      "userPrincipalName": "lab.approver2@azsol642.onmicrosoft.com"
+    }
+  ],
+  "membershipRule": null,
+  "membershipRuleProcessingState": null,
+  "onPremisesSamAccountName": null,
+  "onPremisesSecurityIdentifier": null,
+  "onPremisesSyncEnabled": null,
+  "owners": [],
+  "preferredDataLocation": null,
+  "preferredLanguage": null,
+  "proxyAddresses": [],
+  "resourceProvisioningOptions": [],
+  "securityEnabled": true,
+  "securityIdentifier": "S-1-12-1-23220906-1314260004-2717967533-3596509707",
+  "theme": null,
+  "visibility": null
+}

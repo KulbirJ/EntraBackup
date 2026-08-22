@@ -1,12 +1,18 @@
 {
   "collection": "users",
-  "count": 4,
+  "count": 10,
   "idField": "id",
   "items": {
+    "15020ce7-4001-4a8f-bc70-f5e45cbc01d6": "lab.standard@azsol642.onmicrosoft.com",
     "29bfaf00-65c2-4aec-b3e1-dcfddd20f4ee": "user4@azsol642.onmicrosoft.com",
     "2ac3d93e-0087-42ce-944b-7a6783c8d94d": "user3@azsol642.onmicrosoft.com",
     "399b2b9a-ac4d-4ca5-83d0-3a67077d45ca": "KulbirJaglan@azsol642.onmicrosoft.com",
-    "91afb70a-da8b-45a8-89b2-4a58b6e22df8": "user2@azsol642.onmicrosoft.com"
+    "48646b61-a56f-4888-b209-b6dd3e8490f3": "bg-01@azsol642.onmicrosoft.com",
+    "5245bbcd-4f25-4dab-915a-7ad5c20c581d": "bg-02@azsol642.onmicrosoft.com",
+    "91afb70a-da8b-45a8-89b2-4a58b6e22df8": "user2@azsol642.onmicrosoft.com",
+    "9631952e-a738-4003-9123-e868aa26af01": "lab.approver1@azsol642.onmicrosoft.com",
+    "cd93b92b-f87e-499a-adbf-eae35f7a4577": "lab.requester@azsol642.onmicrosoft.com",
+    "e01b5977-6069-4acb-b297-a65952ae1e87": "lab.approver2@azsol642.onmicrosoft.com"
   },
   "layout": "per-object"
 }

@@ -1,0 +1,28 @@
+{
+  "accountId": "19a113ce-a488-46f1-aedc-757a591bad61",
+  "accountName": "azsol642",
+  "appliesTo": "User",
+  "capabilityStatus": "Enabled",
+  "consumedUnits": 0,
+  "id": "19a113ce-a488-46f1-aedc-757a591bad61_52cdf00e-8303-4223-a749-ff69a13e2dd0",
+  "prepaidUnits": {
+    "enabled": 200,
+    "lockedOut": 0,
+    "suspended": 0,
+    "warning": 0
+  },
+  "servicePlans": [
+    {
+      "appliesTo": "User",
+      "provisioningStatus": "Success",
+      "servicePlanId": "7dc0e92d-bf15-401d-907e-0884efe7c760",
+      "servicePlanName": "AAD_WRKLDID_P2",
+      "servicePlanType": "AADPremiumService"
+    }
+  ],
+  "skuId": "52cdf00e-8303-4223-a749-ff69a13e2dd0",
+  "skuPartNumber": "Workload_Identities_P2",
+  "subscriptionIds": [
+    "b5372a32-f9ba-460a-a9c2-cd3d3fee0f19"
+  ]
+}
